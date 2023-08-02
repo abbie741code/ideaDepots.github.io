@@ -1,0 +1,87 @@
+body {
+  background-color: #ffffff;
+}
+/* 瀑布流列的寬度設定 */
+.ab-waterfall-col {
+  width: 20%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+/* 當螢幕小於 768px 時縮小列的寬度 */
+@media (max-width: 768px) {
+  .ab-waterfall-col {
+    width: 33%;
+  }
+}
+/* 當螢幕小於 576px 時縮小列的寬度 */
+@media (max-width: 576px) {
+  .ab-waterfall-col {
+    width: 50%;
+  }
+}
+
+.ab-logo-wrapper {
+  width: 154px; /* 自訂寬度 */
+  height: auto; /* 讓高度根據寬度自動縮放 */
+}
+
+.collapse .navbar-collapse {
+	justify-content: flex-end;
+}
+
+.ab-avatar-container {
+  width: 50px; /* 調整容器的寬度和高度以符合您的需求 */
+  height: 50px;
+  border-radius: 50%; /* 將容器設定為圓形 */
+  overflow: hidden; /* 隱藏溢出的部分，實現圓形效果 */
+  background-color: #f1f1f1; /* 可選：如果圖片為透明背景，您可以設定一個背景色以保持一致性 */
+}
+
+.ab-avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持圖片填滿容器而不變形 */
+  object-position: center center; /* 可選：如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
+}
+
+.dropdown-menu.show{
+  border-radius:1rem;
+}
+
+
+/* 設定頭貼一定不會被擠到變形 */
+.ab-card-selfie-wrap {
+  width: 32px; 
+  height: 32px;
+  border-radius: 50%; 
+  overflow: hidden; 
+  background-color: #f1f1f1; 
+  /* 設定頭貼一定不會被擠到變形 */
+  flex-shrink: 0;
+}
+
+.ab-card-selfie-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持圖片填滿容器而不變形 */
+  object-position: center center; /* 可選：如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
+}
+
+.ab-tag{
+  padding: 4px 8px;
+  background-color: var(--main-color);
+  border-radius: 0.25rem;
+  color: #ffffff;
+}
+
+/* .ab-card-text-ellipsis {
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+} */
+
+/* 自訂大頭貼圖片大小為 40px x 40px，保持圓形 */
+.ab-card-avatar {
+  width: 40px;
+  height: 40px;
+}
