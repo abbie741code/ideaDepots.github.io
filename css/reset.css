@@ -220,3 +220,25 @@ button {
 .fs-16{
 	font-size: 16px;
 }
+
+
+/* footer置底 */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex; /*使物件依序排列*/
+  flex-direction: column; /*使物件垂直排列*/
+}
+.wrapper {
+  flex-grow: 1; /*2️⃣wrapper拿走剩餘的垂直空間*/
+}
+.footer {
+  background-color: gray; /*1️⃣footer拿走footer的空間*/
+}
+
+
+body,p {
+  line-height: 1.6 !important; /* 調整行高的數值，根據需要調整 */
+}

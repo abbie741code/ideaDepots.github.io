@@ -26,36 +26,36 @@ body {
 }
 
 .collapse .navbar-collapse {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
+/* 大頭貼 */
 .ab-avatar-container {
   width: 50px; /* 調整容器的寬度和高度以符合您的需求 */
   height: 50px;
   border-radius: 50%; /* 將容器設定為圓形 */
   overflow: hidden; /* 隱藏溢出的部分，實現圓形效果 */
-  background-color: #f1f1f1; /* 可選：如果圖片為透明背景，您可以設定一個背景色以保持一致性 */
+  background-color: #f1f1f1; /* 可選:如果圖片為透明背景，您可以設定一個背景色以保持一致性 */
 }
 
 .ab-avatar-container img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 保持圖片填滿容器而不變形 */
-  object-position: center center; /* 可選：如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
+  object-position: center center; /* 可選:如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
 }
 
-.dropdown-menu.show{
-  border-radius:1rem;
+.dropdown-menu.show {
+  border-radius: 1rem;
 }
 
-
-/* 設定頭貼一定不會被擠到變形 */
+/* 首頁瀑布流設定頭貼一定不會被擠到變形 */
 .ab-card-selfie-wrap {
-  width: 32px; 
+  width: 32px;
   height: 32px;
-  border-radius: 50%; 
-  overflow: hidden; 
-  background-color: #f1f1f1; 
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f1f1f1;
   /* 設定頭貼一定不會被擠到變形 */
   flex-shrink: 0;
 }
@@ -64,10 +64,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; /* 保持圖片填滿容器而不變形 */
-  object-position: center center; /* 可選：如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
+  object-position: center center; /* 可選:如果需要自定義圖片在容器中的位置，可以調整這個屬性的值 */
 }
 
-.ab-tag{
+.ab-tag {
   padding: 4px 8px;
   background-color: var(--main-color);
   border-radius: 0.25rem;
@@ -84,4 +84,67 @@ body {
 .ab-card-avatar {
   width: 40px;
   height: 40px;
+}
+
+/* 上傳照片  */
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px; /* 設置最大寬度來控制在一行內排列 */
+}
+
+/* 預覽照片設定 */
+.square {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.preview-row img {
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: cover;
+  object-position: center center; 
+}
+
+.preview-row {
+  margin-top: 1rem;
+}
+
+/* form-group設定 */
+.form-group label,
+.ab-min-width {
+  min-width: 100px; /* 調整寬度的值，根據需要自行調整 */
+}
+
+.ab-btn-minwidth {
+  min-width: 80px;
+}
+
+/* 所有input在768px以下時100%顯示 */
+@media (max-width: 768px) {
+  .form-group {
+    width: 100% !important;
+  }
+}
+
+.form-group {
+  word-break: break-all; /* 在任意字元處換行，以適應容器寬度 */
+}
+.form-group-h {
+  height: 100px;
+}
+
+.ab-upload-max-pic-size {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.ab-upload-max-pic-size img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
