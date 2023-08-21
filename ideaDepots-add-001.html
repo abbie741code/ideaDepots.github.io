@@ -22,9 +22,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- 引用bs5.2.2 (local自行放） -->
-    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css" /> -->
-
     <!-- 引用font awesome 6.2.1  -->
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
     <!-- 引bs-icon -->
@@ -198,6 +195,46 @@
         >
           <i class="fa-solid fa-trash-can fs-5"></i>
         </button>
+
+        <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">您確定要刪除嗎？</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  取消
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  onclick="deleteItem()"
+                >
+                  刪除
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- <p class="border-bottom border-secondary pb-3 fs-4 fw-bold">新增知識庫</p> -->
 
@@ -345,6 +382,13 @@
       </div>
     </footer>
 
+    <!-- jQuery(CDN) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- 引用bs的js (CDN) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
@@ -352,12 +396,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- 一引用navbar的下拉式選單會失效 -->
-    <!-- jq-3.6.0.js & popper.js & bs.js (local自行放） -->
-    <!-- <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
-    <script src="bootstrap-5.2.2-dist/js/popper.min.js"></script>
-    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
-
+    <!-- footer -->
     <script>
       // 取得當前年份
       var currentYear = new Date().getFullYear();

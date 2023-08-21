@@ -22,6 +22,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- 引用bs5.2.2 (local自行放） -->
+    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css" /> -->
+
     <!-- 引用font awesome 6.2.1  -->
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
     <!-- 引bs-icon -->
@@ -170,20 +173,10 @@
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item" aria-current="page">10905001</li>
           <li class="breadcrumb-item active" aria-current="page">
-            新增專案專案資料
+            編輯專案專案資料
           </li>
         </ol>
       </nav>
-
-      <!-- alert -->
-      <!-- <div class="alert  alert-success d-flex align-items-center p-0" role="alert">
-        <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-        </svg>
-        <div class="ms-2">
-          <p class="m-2">新增專案成功！</p>
-        </div>
-      </div> -->
 
       <!-- alert -->
       <div class="alert alert-success d-flex align-items-center" role="alert">
@@ -201,12 +194,14 @@
             ></path>
           </svg>
         </div>
-        <div class="alert-link">新增專案成功！</div>
+        <div class="alert-link">編輯專案成功！</div>
       </div>
+
+      
 
       <!-- title -->
       <p class="border-bottom border-secondary pb-3 fs-4 fw-bold">
-        新增專案專案資料
+        編輯專案專案資料
       </p>
 
       <form class="container mt-4">
@@ -414,33 +409,53 @@
         <!-- 上傳資料 -->
         <div class="border-top border-secondary mb-1">
           <p class="pb-3 fs-5 fw-bold pt-3">上傳資料</p>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="photoUpload"></label>
-                <input
-                  type="file"
-                  class="form-control mt-2"
-                  id="photoUpload"
-                  multiple
-                />
-
-                <!-- 預覽圖片的正方形框 -->
-                <!-- <div class="preview-container">
-                </div> -->
-                <!-- 預覽圖片的正方形框 -->
-                <div class="preview-row">
-                  <!-- 用於顯示預覽圖片的區域 -->
-                </div>
+          <div class="row mb-3 gy-3 gy-md-0">
+            <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
               </div>
+              <button class="mt-2 badge bg-light text-dark border-1 delete-button">刪除</button>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+
+           <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <button class="mt-2 badge bg-light text-dark border-1 delete-button">刪除</button>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+
+           <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <button class="mt-2 badge bg-light text-dark border-1 delete-button">刪除</button>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+
+           <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <button class="mt-2 badge bg-light text-dark border-1 delete-button">刪除</button>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
             </div>
           </div>
         </div>
         <!-- 觀看相關照片 -->
-        <!-- <div class="row mb-5">
-          <div class="col-md-6">
-            <a href="" class="btn btn-secondary w-100">觀看相關照片</a>
-          </div>
+        <!-- <div class="d-grid mb-5">
+          <button class="btn btn-secondary w-100" type="button">
+            觀看相關照片
+          </button>
         </div> -->
 
         <!-- 結案資訊 -->
@@ -752,19 +767,18 @@
       </div>
     </footer>
 
-		<!-- jQuery(CDN) -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<!-- 引用bs的js (CDN) -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-			crossorigin="anonymous"
-		></script>
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 一引用navbar的下拉式選單會失效 -->
+    <!-- jq-3.6.0.js & popper.js & bs.js (local自行放） -->
+    <!-- <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
 
     <script>
       // 取得當前年份
@@ -775,7 +789,7 @@
         "Copyright © " + currentYear + " BORNA";
     </script>
 
-    <!-- 上傳照片+刪除照片 -->
+    <!-- 上傳照片 -->
     <script>
       // 當選擇照片後的事件處理函式
       document
@@ -831,6 +845,18 @@
           }
         });
     </script>
+    <!-- 上傳刪除的照片照片 -->
+    <script>
+      const deleteButtons = document.querySelectorAll(".delete-button");
+
+      deleteButtons.forEach((deleteButton) => {
+        deleteButton.addEventListener("click", () => {
+          const parentDiv = deleteButton.parentElement;
+          parentDiv.remove();
+        });
+      });
+    </script>
+
     <!-- 获取当前日期 -->
     <script>
       // 获取当前日期

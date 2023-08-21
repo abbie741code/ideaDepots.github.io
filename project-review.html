@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdeaDepots</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用bs的css (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <!-- 引bs-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- 自行設定css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* * {
+        outline: 1px solid rgb(255, 173, 213);
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand ab-logo-wrapper" href="#">
+          <img src="images/logo.svg" alt="" class="w-100" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse me-md-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">點子倉庫</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">我的專案</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">內部資源</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">客戶資訊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">廠商管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                經營管理
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="#">專案支出</a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="#">管銷費用</a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="#">分析報告</a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="#">帳號設定</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">業績報表</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+          <div class="rounded-avatar-container">
+            <img src="images/dog.png" alt="" >
+          </div>
+        </li> -->
+            <!-- 大頭貼下拉選單 -->
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-toggle ab-avatar-container"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="images/dog.png" alt="" />
+              </div>
+              <!-- 避免下拉式選單被右側吃掉 -->
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="#">
+                    <i class="fa-regular fa-user me-2"></i>個人資料
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="#">
+                    <i class="fa-solid fa-location-dot me-2"></i>我要打卡
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主要內容區域 -->
+    <div class="container wrapper">
+      <!-- Breadcrumb -->
+      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+        <ul class="breadcrumb py-3">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item" aria-current="page">10905001</li>
+        </ul>
+      </nav>
+
+      <!-- icon -->
+      <div>
+        <a href="project-edit.html">
+          <i class="bi bi-pencil-fill large-icon me-1"></i>
+        </a>
+        <a href="project-review.html" onclick="printDocument(); return false;">
+          <i class="bi bi-printer-fill large-icon me-1"></i>
+        </a>
+        <!-- 到時候download要換成此專案.pdf -->
+        <a href="" download="other-file.zip">
+          <i class="bi bi-file-earmark-arrow-down-fill large-icon"></i>
+        </a>
+      </div>
+
+      <p class="py-3 fs-4 fw-bold">微軟Surface上市記者會</p>
+
+      <form class="container mt-4">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="row gx-5 gy-3">
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">專案號碼</label>
+                  <div class="col-md-9">11009001</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">專案類型</label>
+                  <div class="col-md-9">品牌設計</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">客戶名稱</label>
+                  <div class="col-md-9">微軟</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">聯繫窗口</label>
+                  <div class="col-md-9">劉先生</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3"> 開立日期</label>
+                  <div class="col-md-9">2020 年 5 月 1 日</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">聯絡電話</label>
+                  <div class="col-md-9">02-2704-3024</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">分機</label>
+                  <div class="col-md-9">#017</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">E-mail</label>
+                  <div class="col-md-9">jason.liu@veda.com.tw</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">行動電話</label>
+                  <div class="col-md-9">0922-817-167</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">負責業務</label>
+                  <div class="col-md-9">Ryan Liu</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">負責設計</label>
+                  <div class="col-md-9">Ryan Liu</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">協助設計</label>
+                  <div class="col-md-9">Ryan Liu</div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="option1" class="col-md-4 col-form-label"
+                  >內容進度</label
+                >
+                <div class="col-md-12">
+                  微軟Surface上市記者會即將舉行，屆時將推出引人矚目的新產品和創新科技。活動內容包括精彩演講、即時互動體驗及媒體交流，將為您帶來嶄新的數位體驗。敬請期待這場充滿活力的盛事！
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 專案支出 -->
+        <div class="border-top border-secondary mb-3">
+          <p class="pb-3 fs-5 fw-bold pt-3">專案支出</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="">
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">支付對象</th>
+                  <th scope="col">摘要</th>
+                  <th scope="col">含稅金額</th>
+                  <th scope="col">支出日期</th>
+                  <th scope="col">申請人員</th>
+                  <th scope="col">發票號碼</th>
+                  <th scope="col">支出單號</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>尼克斯</td>
+                  <td>筆記本印製500本</td>
+                  <td>NT$115,000</td>
+                  <td>2020/10/31</td>
+                  <td>Miranda Liu</td>
+                  <td>NT16871687</td>
+                  <td>11000005</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>尼克斯</td>
+                  <td>筆記本印製500本</td>
+                  <td>NT$115,000</td>
+                  <td>2020/10/31</td>
+                  <td>Miranda Liu</td>
+                  <td>NT16871687</td>
+                  <td>11000005</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>尼克斯</td>
+                  <td>筆記本印製500本</td>
+                  <td>NT$115,000</td>
+                  <td>2020/10/31</td>
+                  <td>Miranda Liu</td>
+                  <td>NT16871687</td>
+                  <td>11000005</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 帳務資訊 -->
+        <div class="border-1 border-top border-secondary mb-1">
+          <p class="pb-3 fs-5 fw-bold pt-3">帳務資訊</p>
+          <div
+            class="d-flex fw-bold border-1 border-bottom border-secondary mb-3 fs-5"
+          >
+            <p class="me-2">專案總金額</p>
+            <p>NT$ 1,680,000</p>
+          </div>
+
+          <p class="fw-bold">上傳資料</p>
+          <div class="row mb-3 gy-3 gy-md-0">
+            <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+            <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+            <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+            <div class="col-md-3">
+              <div class="">
+                <img src="images/costing.png" alt="" class="w-100" />
+              </div>
+              <a href="#" target="_blank" class="text-decoration-underline"
+                >20220621_報價A.pdf</a
+              >
+            </div>
+          </div>
+          <!-- btn -->
+          <div class="d-grid mb-5">
+            <button class="btn btn-secondary w-100" type="button">
+              觀看相關照片
+            </button>
+          </div>
+        </div>
+
+        <!-- 結案資訊 -->
+        <div class="border-top border-secondary mb-5">
+          <p class="pb-3 fs-5 fw-bold pt-3">結案資訊</p>
+          <div class="row gx-5 gy-3">
+            <div class="col-md-6">
+              <div class="row d-flex">
+                <label for="" class="col-md-3">發票號碼</label>
+                <div class="col-md-9">PR-12912565</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row d-flex">
+                <label for="" class="col-md-3">結案日期</label>
+                <div class="col-md-9">2020 年 5 月 1 日</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row d-flex">
+                <label for="" class="col-md-3">付費方式</label>
+                <div class="col-md-9">匯款</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row d-flex">
+                <label for="" class="col-md-3">付費日期</label>
+                <div class="col-md-9">2020 年 5 月 29 日</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 發票開立資訊 -->
+        <div class="border-top border-secondary mb-5">
+          <p class="pb-3 fs-5 fw-bold pt-3">發票開立資訊</p>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <div class="card border-1 border-secondary">
+                <div
+                  class="card-title border-bottom border-1 border-secondary text-center fs-4"
+                >
+                  Invoice1
+                </div>
+                <div class="card-body">
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <div class="card border-1 border-secondary">
+                <div
+                  class="card-title border-bottom border-1 border-secondary text-center fs-4"
+                >
+                  Invoice2
+                </div>
+                <div class="card-body">
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <div class="card border-1 border-secondary">
+                <div
+                  class="card-title border-bottom border-1 border-secondary text-center fs-4"
+                >
+                  Invoice3
+                </div>
+                <div class="card-body">
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                  <div class="row d-flex mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票號碼 </label>
+                    </div>
+                    <div class="col-8">PR-12912565</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- btn -->
+      <div class="container mt-5">
+        <div class="text-center">
+          <button type="button" class="btn btn-light me-2 px-5">取消</button>
+          <button type="button" class="btn btn-secondary px-5">儲存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white p-3 mt-4 text-center border-top">
+      <div class="container-fluid">
+        <!-- 自動帶入年份 -->
+        <p class="text-secondary" id="footer-year"></p>
+      </div>
+    </footer>
+
+
+
+		<!-- jQuery(CDN) -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- 引用bs的js (CDN) -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"
+		></script>
+
+    <script>
+      // 取得當前年份
+      var currentYear = new Date().getFullYear();
+
+      // 將年份顯示在頁腳中
+      document.getElementById("footer-year").innerHTML =
+        "Copyright © " + currentYear + " BORNA";
+    </script>
+
+    <!-- 上傳照片 -->
+    <script>
+      // 當選擇照片後的事件處理函式
+      document
+        .getElementById("photoUpload")
+        .addEventListener("change", function (event) {
+          event.stopPropagation(); // 停止事件傳播
+
+          const previewRow = document.querySelector(".preview-row");
+          previewRow.innerHTML = ""; // 清空已有的預覽
+
+          const maxWidth = 150; // 最大寬度，根據需要調整
+          const files = event.target.files;
+          const fileCount = files.length;
+
+          for (let i = 0; i < fileCount; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+
+            reader.onloadend = function () {
+              const previewContainer = document.createElement("div");
+              previewContainer.className = "preview-container";
+
+              const img = document.createElement("img");
+              img.src = reader.result;
+              img.alt = "預覽圖片";
+              img.className = "square bg-secondary";
+
+              img.onload = function () {
+                const aspectRatio = img.width / img.height;
+                if (img.width > maxWidth) {
+                  img.width = maxWidth;
+                  img.height = maxWidth / aspectRatio;
+                }
+              };
+
+              const deleteButton = document.createElement("button");
+              deleteButton.innerText = "刪除";
+              deleteButton.className =
+                "badge bg-light text-dark border-1 delete-button mb-2";
+
+              deleteButton.addEventListener("click", function () {
+                previewRow.removeChild(previewContainer);
+              });
+
+              previewContainer.appendChild(img);
+              previewContainer.appendChild(deleteButton);
+              previewRow.appendChild(previewContainer);
+            };
+
+            if (file) {
+              reader.readAsDataURL(file);
+            }
+          }
+        });
+    </script>
+    <!-- footer获取当前日期 -->
+    <script>
+      // 获取当前日期
+      const today = new Date();
+      // 将日期格式化为 YYYY-MM-DD 格式
+      const formattedDate = today.toISOString().split("T")[0];
+      // 设置输入框的默认值
+      document.getElementById("開立日期").value = formattedDate;
+    </script>
+
+    <!-- 列印功能 -->
+    <script>
+      function printDocument() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

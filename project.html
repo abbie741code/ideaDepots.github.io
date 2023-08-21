@@ -82,11 +82,11 @@
   <body>
     <!-- Header -->
     <nav
-      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14"
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand ab-logo-wrapper ms-md-1" href="index.html">
-          <img src="images/logo.svg" alt="" class=" " />
+        <a class="navbar-brand ab-logo-wrapper" href="#">
+          <img src="images/logo.svg" alt="" class="w-100" />
         </a>
 
         <button
@@ -202,15 +202,15 @@
     <div class="container wrapper">
       <!-- search bar -->
       <div class="my-4">
-        <div class="row mb-1">
-          <div class="col-md-3 mb-1 mb-md-2">
+        <div class="row mb-1 g-2">
+          <div class="col-6 col-md-3 mb-1 mb-md-2">
             <select class="form-select" aria-label="Default select example">
               <option value="1">2021</option>
               <option value="2">2022</option>
               <option value="3" selected>2023</option>
             </select>
           </div>
-          <div class="col-md-3 mb-1 mb-md-2">
+          <div class="col-6 col-md-3 mb-1 mb-md-2">
             <select class="form-select" aria-label="Default select example">
               <option value="1">1 月</option>
               <option value="2">2 月</option>
@@ -226,7 +226,7 @@
               <option value="12">12 月</option>
             </select>
           </div>
-          <div class="col-md-3 mb-1 mb-md-2">
+          <div class="col-6 col-md-3 mb-1 mb-md-2">
             <input
               class="form-control"
               type="text"
@@ -234,7 +234,7 @@
               aria-label="default input example"
             />
           </div>
-          <div class="col-md-3 mb-1 mb-md-2">
+          <div class="col-6 col-md-3 mb-1 mb-md-2">
             <input
               class="form-control"
               type="text"
@@ -244,8 +244,8 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-2 mb-1 mb-md-2">
+        <div class="row g-2">
+          <div class="col-6 col-md-2 mb-1 mb-md-2">
             <select class="form-select" aria-label="Default select example">
               <option selected>負責業務</option>
               <option value="1">One</option>
@@ -253,7 +253,7 @@
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="col-md-2 mb-1 mb-md-2">
+          <div class="col-6 col-md-2 mb-1 mb-md-2">
             <select class="form-select" aria-label="Default select example">
               <option selected>負責設計</option>
               <option value="1">One</option>
@@ -293,7 +293,7 @@
 
       <!-- title:我的專案 -->
       <div class="d-flex align-items-center mb-3">
-        <p class="fs-4">我的專案</p>
+        <p class="fs-4 m-0">我的專案</p>
         <!-- 增加的圖示 -->
         <a
           class="btn btn-secondary rounded-circle ms-2"
@@ -315,25 +315,35 @@
             <th>Column 2</th>
             <th>Column 3</th>
             <th>Column 4</th>
-            <th>Column 1</th>
+            <th>Column 5</th>
             <th>Column 2</th>
             <th>Column 3</th>
             <th>Column 4</th>
-            <th>Column 4</th>
+            <th>功能</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
+            <td>微軟Surface上市記者會</td>
+            <td>微軟設計案</td>
             <td>Row 1 Data 1</td>
             <td>Row 2 Data 2</td>
             <td>Row 1 Data 1</td>
             <td>Row 2 Data 2</td>
             <td>Row 1 Data 1</td>
             <td>Row 5 Data 2</td>
-            <td>Row 6 Data 2</td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="me-1">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <a href="#" class="delete-row me-1">
+                <i class="fa-solid fa-trash-can"></i>
+              </a>
+            </td>
           </tr>
           <tr>
             <td>Row 1 Data 1</td>
@@ -344,7 +354,17 @@
             <td>Row 8 Data 2</td>
             <td>Row 1 Data 1</td>
             <td>Row 1 Data 2</td>
-            <td>Row 1 Data 2</td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="me-1">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <a href="#" class="delete-row me-1">
+                <i class="fa-solid fa-trash-can"></i>
+              </a>
+            </td>
           </tr>
           <tr>
             <td>Row 1 Data 1</td>
@@ -355,7 +375,17 @@
             <td>Row 8 Data 2</td>
             <td>Row 1 Data 1</td>
             <td>Row 1 Data 2</td>
-            <td>Row 1 Data 2</td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="me-1">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <a href="#" class="delete-row me-1">
+                <i class="fa-solid fa-trash-can"></i>
+              </a>
+            </td>
           </tr>
           <tr>
             <td>Row 1 Data 1</td>
@@ -366,7 +396,17 @@
             <td>Row 8 Data 2</td>
             <td>Row 1 Data 1</td>
             <td>Row 1 Data 2</td>
-            <td>Row 1 Data 2</td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="me-1">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <a href="#" class="delete-row me-1">
+                <i class="fa-solid fa-trash-can"></i>
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -380,18 +420,19 @@
       </div>
     </footer>
 
-    <!-- 引用bs的js (CDN) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- 一引用navbar的下拉式選單會失效 -->
-    <!-- jq-3.6.0.js & popper.js & bs.js (local自行放） -->
-    <!-- <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
-    <script src="bootstrap-5.2.2-dist/js/popper.min.js"></script>
-    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
+		<!-- jQuery(CDN) -->
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script> -->
+		<!-- 引用bs的js (CDN) -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"
+		></script>
 
     <script>
       // 取得當前年份
@@ -644,6 +685,71 @@
             thousands: ",",
           },
           responsive: true,
+        });
+      });
+    </script>
+
+    <!-- 刪除整條tr（要查一下有什麼bug) -->
+    <script>
+      // 等待文檔完全載入後執行JavaScript代碼
+      document.addEventListener("DOMContentLoaded", function () {
+        // 選擇所有具有 "delete-row" 類名的刪除鏈接
+        const deleteLinks = document.querySelectorAll(".delete-row");
+
+        // 遍歷每個刪除鏈接，為其添加點擊事件處理程序
+        deleteLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // 防止默認鏈接行為
+
+            // 阻止事件冒泡
+            event.stopPropagation();
+
+            // 提示確認是否刪除
+            const confirmed = confirm("確定要刪除嗎?");
+            if (confirmed) {
+              const row = link.closest("tr"); // 找到最近的 <tr> 元素
+              row.remove(); // 從DOM中移除 <tr> 元素
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- 刪除整條tr（使用 Bootstrap modal 詢問確認） -->
+    <script>
+      // 等待文檔完全載入後執行 JavaScript 代碼
+      document.addEventListener("DOMContentLoaded", function () {
+        // 選擇所有具有 "delete-row" 類名的刪除鏈接
+        const deleteLinks = document.querySelectorAll(".delete-row");
+
+        // 遍歷每個刪除鏈接，為其添加點擊事件處理程序
+        deleteLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // 防止默認鏈接行為
+
+            // 阻止事件冒泡
+            event.stopPropagation();
+
+            // 獲取相關元素
+            const row = link.closest("tr"); // 找到最近的 <tr> 元素
+            const modal = new bootstrap.Modal(
+              document.getElementById("deleteModal")
+            ); // 初始化模態框
+
+            // 顯示模態框
+            modal.show();
+
+            // 监听模态框中的删除按钮点击事件
+            const deleteButton = document.getElementById("confirmDeleteButton");
+            deleteButton.addEventListener("click", function () {
+              // 提示確認是否刪除
+              const confirmed = confirm("確定要刪除嗎?");
+              if (confirmed) {
+                row.remove(); // 從DOM中移除 <tr> 元素
+              }
+              modal.hide(); // 隱藏模態框
+            });
+          });
         });
       });
     </script>
