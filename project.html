@@ -22,9 +22,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- 引用bs5.2.2 (local自行放） -->
-    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css" /> -->
-
     <!-- 引用font awesome 6.2.1  -->
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
     <!-- 引bs-icon -->
@@ -71,6 +68,9 @@
 
     <!-- css link (自定義的表格css位置,要放在最後面)-->
     <link rel="stylesheet" href="DataTables/ab-dataTables.css" />
+
+    <!-- css link (bs) 8/23飲用後發現有奇怪線條-->
+    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.css" /> -->
 
     <style>
       /* * {
@@ -355,13 +355,13 @@
             <td>Row 1 Data 1</td>
             <td>Row 1 Data 2</td>
             <td>
-              <a href="project-review.html" class="me-1">
+              <a href="project-review.html" class="me-1 link-secondary">
                 <i class="bi bi-eye"></i>
               </a>
-              <a href="project-edit.html" class="me-1">
+              <a href="project-edit.html" class="me-1 link-secondary">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="#" class="delete-row me-1">
+              <a href="#" class="delete-row me-1 link-secondary">
                 <i class="fa-solid fa-trash-can"></i>
               </a>
             </td>
