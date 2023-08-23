@@ -146,7 +146,7 @@ textarea,
 button {
 	font-family: 微軟正黑體, sans-serif;
 	color: #5C5C5C;
-	word-break: break-all;
+	/* word-break: break-all; */
 }
 
 textarea {

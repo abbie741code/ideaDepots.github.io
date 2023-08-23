@@ -1,0 +1,16 @@
+.index{
+  width: 500px;
+}
+.index2{
+  width: 500px;
+}
+
+.bg-hover-primary:hover {
+  color: rgb(138, 174, 172);
+  background-color: rgb(237, 139, 139);
+}
+
+.bg-hover-primary:hover > i {
+  color: rgb(138, 174, 172);
+  background-color: rgb(237, 139, 139);
+}

@@ -148,3 +148,27 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+/* project頂部的icon */
+.large-icon {
+  font-size: 28px;
+}
+
+/* .ab-max-costing-w{
+  width: 300px;
+} */
+
+
+/* 
+我的專案帳務資訊 */
+@media (max-width: 767px) { /* 使用适当的断点 */
+  .table-responsive {
+    overflow-x: auto; /* 横向滚动，以显示溢出内容 */
+  }
+  .table th,
+  .table td {
+    white-space: nowrap; /* 防止文字换行 */
+    min-width: 100px; /* 设置最小宽度 */
+  }
+}
