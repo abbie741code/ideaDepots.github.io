@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用bs的css (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <!-- 引bs-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- 自行設定css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* * {
+        outline: 1px solid rgb(255, 173, 213);
+      } */
+
+      /* (A) MATERIAL ICONS */
+      .aWrap .svg-inline--fa {
+        color: white !important;
+      }
+
+      /* (B) WRAPPER */
+      .aWrap {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* allow buttons to wrap into another row on small screens */
+        /* flex-wrap: wrap; */
+        width: 550px;
+        padding: 10px 30px;
+        margin: 5px 0;
+        border-radius: 10px;
+        background: rgb(164, 70, 174);
+        gap: 1rem;
+      }
+
+      .aWrap,
+      .aWrap * {
+        box-sizing: border-box;
+      }
+
+      /* (C) PLAY/PAUSE BUTTON */
+      .aPlay {
+        padding: 0;
+        margin: 0;
+        background: 0;
+        border: 0;
+        cursor: pointer;
+      }
+
+      /* (D) TIME */
+      .aCron {
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0 10px;
+      }
+
+      /* (E) RANGE SLIDERS */
+      /* (E1) HIDE DEFAULT */
+      .aWrap input[type="range"] {
+        appearance: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        background: 0;
+      }
+
+      .range,
+      .range-volume {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .range input,
+      .range-volume input {
+        position: relative;
+        z-index: 1;
+      }
+
+      .range .change-range,
+      .range-volume .change-range {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 0px;
+        background-color: rgb(187, 187, 187);
+        border-radius: 10px 0 0 10px;
+      }
+
+      .range-volume .change-range {
+        height: 10px;
+        width: 95%;
+      }
+
+      .under-ranger {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 6px;
+        width: 100%;
+        background-color: rgb(63, 63, 63);
+        border-radius: 10px;
+      }
+
+      .range-volume .under-ranger {
+        height: 10px;
+      }
+
+      .aWrap input[type="range"]::-webkit-slider-thumb {
+        appearance: none;
+      }
+
+      /* (E2) CUSTOM SLIDER TRACK */
+      .aWrap input[type="range"]::-webkit-slider-runnable-track {
+        background: transparent;
+        height: 6px;
+        border-radius: 10px;
+      }
+
+      /* (E3) CUSTOM SLIDER BUTTON */
+      .aWrap input[type="range"]::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 0;
+        background: #fff;
+        position: relative;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+
+      .aWrap input[type="range"]::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 0;
+        background: #fff;
+        position: relative;
+        cursor: pointer;
+        margin-top: -5px;
+      }
+
+      /* (F) VOLUME */
+      .aVolIco {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      input.aVolume {
+        width: 100px !important;
+      }
+
+      .aVolume::-webkit-slider-runnable-track {
+        height: 10px !important;
+      }
+
+      .aVolume::-webkit-slider-thumb {
+        margin-top: -3px !important;
+      }
+
+      .aVolume::-moz-range-thumb {
+        margin-top: -3px !important;
+      }
+
+      .volume-container {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- (B) AUDIO PLAYERS -->
+    <div
+      class="aWrap"
+      data-src="https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3"
+    >
+      <button class="aPlay" disabled>
+        <span class="aPlayIco"><i class="fa fa-play"></i></span>
+      </button>
+      <div class="range">
+        <span class="under-ranger"></span>
+        <input
+          class="aSeek"
+          type="range"
+          min="0"
+          value="0"
+          step="1"
+          disabled
+        /><span class="change-range"></span>
+      </div>
+      <div class="aCron">
+        <span class="aNow"></span> / <span class="aTime"></span>
+      </div>
+      <div class="volume-container">
+        <span class="aVolIco"><i class="fa fa-volume-up"></i></span>
+        <div class="range-volume">
+          <span class="under-ranger"></span>
+          <input
+            class="aVolume"
+            type="range"
+            min="0"
+            max="1"
+            value="1"
+            step="0.1"
+            disabled
+          /><span class="change-range"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery(CDN) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Coded by: https://mmzand.ir
+      // Credit: https://code-boxx.com/html-custom-audio-player/#sec-audio
+      // (A) SUPPORT FUNCTION - FORMAT HH:MM:SS
+      var timeString = (secs) => {
+        // (A1) HOURS, MINUTES, SECONDS
+        let ss = Math.floor(secs),
+          hh = Math.floor(ss / 3600),
+          mm = Math.floor((ss - hh * 3600) / 60);
+        ss = ss - hh * 3600 - mm * 60;
+
+        // (A2) RETURN FORMATTED TIME
+        if (hh > 0) {
+          mm = mm < 10 ? "0" + mm : mm;
+        }
+        ss = ss < 10 ? "0" + ss : ss;
+        return hh > 0 ? `${hh}:${mm}:${ss}` : `${mm}:${ss}`;
+      };
+
+      function setProgress(elTarget) {
+        let divisionNumber = elTarget.getAttribute("max") / 100;
+        let rangeNewWidth = Math.floor(elTarget.value / divisionNumber);
+        if (rangeNewWidth > 95) {
+          elTarget.nextSibling.style.width = "95%";
+        } else {
+          elTarget.nextSibling.style.width = rangeNewWidth + "%";
+        }
+      }
+
+      for (let i of document.querySelectorAll(".aWrap")) {
+        // (B) AUDIO + HTML SETUP + FLAGS
+        i.audio = new Audio(encodeURI(i.dataset.src));
+        (i.aPlay = i.querySelector(".aPlay")),
+          (i.aPlayIco = i.querySelector(".aPlayIco")),
+          (i.aNow = i.querySelector(".aNow")),
+          (i.aTime = i.querySelector(".aTime")),
+          (i.aSeek = i.querySelector(".aSeek")),
+          (i.aVolume = i.querySelector(".aVolume")),
+          (i.aVolIco = i.querySelector(".aVolIco"));
+        i.seeking = false; // user is dragging the seek bar
+
+        // (C) PLAY & PAUSE
+        // (C1) CLICK TO PLAY/PAUSE
+        i.aPlay.onclick = () => {
+          if (i.audio.paused) {
+            i.audio.play();
+          } else {
+            i.audio.pause();
+          }
+        };
+
+        // (C2) SET PLAY/PAUSE ICON
+        i.audio.onplay = () =>
+          (i.aPlayIco.innerHTML = '<i class="fa fa-pause"></i>');
+        i.audio.onpause = () =>
+          (i.aPlayIco.innerHTML = '<i class="fa fa-play"></i>');
+
+        // (D) TRACK PROGRESS & SEEK TIME
+        // (D1) TRACK LOADING
+        i.audio.onloadstart = () => {
+          i.aNow.innerHTML = "Loading";
+          i.aTime.innerHTML = "";
+        };
+
+        // (D2) ON META LOADED
+        i.audio.onloadedmetadata = () => {
+          // (D2-1) INIT SET TRACK TIME
+          i.aNow.innerHTML = timeString(0);
+          i.aTime.innerHTML = timeString(i.audio.duration);
+
+          // (D2-2) SET SEEK BAR MAX TIME
+          i.aSeek.max = Math.floor(i.audio.duration);
+
+          // (D2-3) USER CHANGE SEEK BAR TIME
+          i.aSeek.oninput = () => (i.seeking = true); // prevents clash with (d2-4)
+          i.aSeek.onchange = () => {
+            i.audio.currentTime = i.aSeek.value;
+            if (!i.audio.paused) {
+              i.audio.play();
+            }
+            i.seeking = false;
+          };
+
+          // (D2-4) UPDATE SEEK BAR ON PLAYING
+          i.audio.ontimeupdate = () => {
+            if (!i.seeking) {
+              i.aSeek.value = Math.floor(i.audio.currentTime);
+            }
+            i.aNow.innerHTML = timeString(i.audio.currentTime);
+            let divisionNumber = i.aSeek.getAttribute("max") / 100;
+            let rangeNewWidth = Math.floor(i.aSeek.value / divisionNumber);
+            if (rangeNewWidth > 95) {
+              i.aSeek.nextSibling.style.width = "95%";
+            } else {
+              i.aSeek.nextSibling.style.width = rangeNewWidth + "%";
+            }
+          };
+        };
+
+        // (E) VOLUME
+        i.aVolIco.onclick = () => {
+          i.audio.volume = i.audio.volume == 0 ? 1 : 0;
+          i.aVolume.value = i.audio.volume;
+          i.aVolIco.innerHTML =
+            i.aVolume.value == 0
+              ? '<i class="fa fa-volume-off"></i>'
+              : '<i class="fa fa-volume-up"></i>';
+          if (i.aVolume.value == 0) {
+            i.aVolume.nextSibling.style.width = "0%";
+          } else {
+            i.aVolume.nextSibling.style.width = "95%";
+          }
+        };
+        i.aVolume.onchange = () => {
+          i.audio.volume = i.aVolume.value;
+          i.aVolIco.innerHTML =
+            i.aVolume.value == 0
+              ? '<i class="fa fa-volume-off"></i>'
+              : '<i class="fa fa-volume-up"></i>';
+        };
+
+        // (F) ENABLE/DISABLE CONTROLS
+        i.audio.oncanplaythrough = () => {
+          i.aPlay.disabled = false;
+          i.aVolume.disabled = false;
+          i.aSeek.disabled = false;
+        };
+        i.audio.onwaiting = () => {
+          i.aPlay.disabled = true;
+          i.aVolume.disabled = true;
+          i.aSeek.disabled = true;
+        };
+
+        i.aSeek.addEventListener("input", function () {
+          setProgress(this);
+        });
+
+        i.aVolume.addEventListener("input", function () {
+          setProgress(this);
+        });
+      }
+    </script>
+  </body>
+</html>
