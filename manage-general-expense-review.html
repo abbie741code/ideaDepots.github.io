@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdeaDepots</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用bs的css (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <!-- 引bs-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- 自行設定css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* * {
+        outline: 1px solid rgb(255, 173, 213);
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
+          <img src="images/logo.svg" alt="" class="w-100" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse me-md-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">點子倉庫</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">我的專案</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resource.html">內部資源</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer.html">客戶資訊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contractor.html">廠商管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">後台管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                經營管理
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contractor.html">廠商管理</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">後台管理</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+          <div class="rounded-avatar-container">
+            <img src="images/dog.png" alt="" >
+          </div>
+        </li> -->
+            <!-- 大頭貼下拉選單 -->
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-toggle ab-avatar-container"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="images/dog.png" alt="" />
+              </div>
+              <!-- 避免下拉式選單被右側吃掉 -->
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="staff.html">
+                    <i class="fa-regular fa-user me-2"></i>個人資料
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="start-work.html">
+                    <i class="fa-solid fa-location-dot me-2"></i>我要打卡
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="log-out.html">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主要內容區域 -->
+    <div class="container wrapper">
+      <!-- Breadcrumb -->
+      <nav
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb"
+        class="my-4"
+      >
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="manage-general-expense.html">管銷費用</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="#">支出編號 EX2022500092</a>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- icon -->
+      <div>
+        <a href="manage-general-expense-edit.html">
+          <i class="fa fa-pencil large-icon" aria-hidden="true"></i>
+        </a>
+        <a
+          href="manage-general-expense-review.html"
+          onclick="printDocument(); return false;"
+        >
+          <i class="bi bi-printer-fill large-icon me-1"></i>
+        </a>
+        <!-- 到時候download要換成此專案.pdf -->
+        <!-- <a href="" download="other-file.zip">
+          <i class="bi bi-file-earmark-arrow-down-fill large-icon"></i>
+        </a> -->
+      </div>
+
+      <div class="bg-light d-flex align-items-center justify-content-between">
+        <p class="py-3 fs-4 fw-bold bg-light">支出編號 EX2022500092</p>
+        <!-- <span class="badge rounded py-1 px-2 bg-success me-2" id="statusSpan"
+          >進行中</span
+        > -->
+      </div>
+
+      <form class="container mt-4">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="row gx-5 gy-3">
+              <!-- <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">支出專案*</label>
+                  <div class="col-md-9">10800001</div>
+                </div>
+              </div> -->
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3"> 支出類型*</label>
+                  <div class="col-md-9">印刷支出</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">支付對象*</label>
+                  <div class="col-md-9">尼克斯</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">支出摘要*</label>
+                  <div class="col-md-9">印刷物一批+手拿牌+truss+貨運</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3"> 含稅金額*</label>
+                  <div class="col-md-9">51,800</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">申請日期*</label>
+                  <div class="col-md-9">2020年5月8日</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">申請人員*</label>
+                  <div class="col-md-9">Jason Lin</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3"> 支付方式*</label>
+                  <div class="col-md-9">匯款</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">支票號碼</label>
+                  <div class="col-md-9">N/A</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">發票日期</label>
+                  <div class="col-md-9">2020年4月5日</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-3">發票號碼</label>
+                  <div class="col-md-9">N12345678, N12345678, N12345678</div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row d-flex">
+                  <label for="" class="col-md-1">發票上傳</label>
+                  <div class="col-md-11">
+                    <div class="ps-0 ps-sm-5">
+                      <img src="images/costing.png" alt="" class="w-10" />
+                      <img src="images/costing.png" alt="" class="w-10" />
+                      <img src="images/costing.png" alt="" class="w-10" />
+                      <img src="images/costing.png" alt="" class="w-10" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 內容及進度 -->
+        <div class="border-top border-secondary mb-5">
+          <p class="pb-3 fs-5 fw-bold pt-3">備註</p>
+          <p>
+            微軟Surface上市記者會即將舉行，屆時將推出引人矚目的新產品和創新科技。活動內容包括精彩演講、即時互動體驗及媒體交流，將為您帶來嶄新的數位體驗。敬請期待這場充滿活力的盛事！
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white p-3 mt-4 text-center border-top">
+      <div class="container-fluid">
+        <!-- 自動帶入年份 -->
+        <p class="text-secondary" id="footer-year"></p>
+      </div>
+    </footer>
+
+    <!-- jQuery(CDN) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--  footer 获取当年日期-->
+    <script src="js/footer.js"></script>
+
+    <!-- 上傳照片+刪除照片 -->
+    <script src="js/uploadImages-new.js"></script>
+    <script src="js/deleteImages.js"></script>
+
+    <!-- search bar+ form> input获取当前日期 -->
+    <!-- <script src="js/getCurrentDate.js"></script> -->
+
+    <!-- 列印功能 -->
+    <script>
+      function printDocument() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

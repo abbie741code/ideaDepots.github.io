@@ -40,6 +40,7 @@
       /* * {
         outline: 2px solid rgb(255, 173, 213);
       } */
+
     </style>
   </head>
 
@@ -49,7 +50,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand ab-logo-wrapper" href="#">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
           <img src="images/logo.svg" alt="" class="w-100" />
         </a>
 
@@ -77,13 +78,13 @@
               <a class="nav-link" href="project.html">我的專案</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">內部資源</a>
+              <a class="nav-link" href="resource.html">內部資源</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">客戶資訊</a>
+              <a class="nav-link" href="customer.html">客戶資訊</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">廠商管理</a>
+              <a class="nav-link" href="contractor.html">廠商管理</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -101,27 +102,42 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">專案支出</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">管銷費用</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">分析報告</a>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">帳號設定</a>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">業績報表</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="#">後台管理</a>
+                </li>
               </ul>
             </li>
             <!-- <li class="nav-item">
-           <div class="rounded-avatar-container">
-             <img src="images/dog.png" alt="" >
-           </div>
-         </li> -->
+              <div class="rounded-avatar-container">
+                <img src="images/dog.png" alt="" >
+              </div>
+            </li> -->
             <!-- 大頭貼下拉選單 -->
             <li class="nav-item dropdown">
               <div
@@ -140,17 +156,17 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="staff.html">
                     <i class="fa-regular fa-user me-2"></i>個人資料
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="start-work.html">
                     <i class="fa-solid fa-location-dot me-2"></i>我要打卡
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="log-out.html">
                     <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >登出
                   </a>
@@ -165,25 +181,18 @@
     <!-- 主要內容區域 -->
     <div class="container wrapper">
       <!-- Breadcrumb -->
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-        <ol class="breadcrumb py-5">
+      <nav
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb"
+        class="my-4"
+      >
+        <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item" aria-current="page">10905001</li>
           <li class="breadcrumb-item active" aria-current="page">
-            新增專案專案資料
+            <a href="#">新增專案資料</a>
           </li>
         </ol>
       </nav>
-
-      <!-- alert -->
-      <!-- <div class="alert  alert-success d-flex align-items-center p-0" role="alert">
-        <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-        </svg>
-        <div class="ms-2">
-          <p class="m-2">新增專案成功！</p>
-        </div>
-      </div> -->
 
       <!-- alert -->
       <div class="alert alert-success d-flex align-items-center" role="alert">
@@ -204,10 +213,36 @@
         <div class="alert-link">新增專案成功！</div>
       </div>
 
+      <!-- icon -->
+      <!-- <div>
+        <a href="project-edit.html">
+          <i class="fa fa-pencil large-icon" aria-hidden="true"></i>
+        </a>
+        <a href="project-review.html" onclick="printDocument(); return false;">
+          <i class="bi bi-printer-fill large-icon me-1"></i>
+        </a>
+      
+        <a href="" download="other-file.zip">
+          <i class="bi bi-file-earmark-arrow-down-fill large-icon"></i>
+        </a>
+ 
+        <a >
+          <i class="bi bi-stop-circle-fill large-icon me-1"></i>
+        </a>
+
+        <a>
+          <i class="bi bi-check-circle-fill large-icon me-1"></i>
+
+        </a>
+      </div> -->
+
       <!-- title -->
-      <p class="border-bottom border-secondary pb-3 fs-4 fw-bold">
-        新增專案專案資料
-      </p>
+      <div
+        class="border-bottom border-secondary pb-3 d-flex align-items-center justify-content-between"
+      >
+        <p class="fs-4 fw-bold">    新增專案資料</p>
+        <span class="badge rounded py-1 px-2" id="statusSpan">中止</span>
+      </div>
 
       <form class="container mt-4">
         <div class="row mb-5">
@@ -217,22 +252,40 @@
                 <div class="row d-flex">
                   <label for="" class="col-md-2 col-form-label">專案號碼</label>
                   <div class="col-md-10">
+                    <!-- to 前衛雞：這邊再麻煩設定專案編號～ -->
                     <input
                       type=""
                       class="form-control"
                       id=""
-                      placeholder="10905001"
+                      placeholder="(自動帶今年本月的專案號碼 EX:2401001 [ 24是2024年;01是1月;001是第一個專案 )"
                     />
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <div class="row d-flex">
-                  <label for="" class="col-md-2 col-form-label">專案類型</label>
-                  <div class="col-md-10">
+                  <label for="" class="col-md-4 col-form-label">專案類型</label>
+                  <div class="col-md-8">
                     <select class="form-control" id="">
-                      <option>公司專案</option>
-                      <option>其他參考</option>
+                      <option disabled selected>選擇專案類型</option>
+                      <option>品牌設計</option>
+                      <option>空間設計</option>
+                      <option>網頁設計</option>
+                      <option>活動場佈</option>
+                      <option>印刷設計</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="row d-flex">
+                  <label for="" class="col-md-4 col-form-label">專案狀態</label>
+                  <div class="col-md-8">
+                    <select class="form-control" id="statusSelect">
+                      <option disabled selected>選擇專案狀態</option>
+                      <option>進行中</option>
+                      <option>結案</option>
+                      <option>中止</option>
                     </select>
                   </div>
                 </div>
@@ -245,7 +298,7 @@
                       type=""
                       class="form-control"
                       id=""
-                      placeholder="ASUS Zenpad主視覺設計主主視覺設ASUS Zenpad主視覺設計主主視覺設"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -283,7 +336,7 @@
                     <input
                       type="date"
                       class="form-control"
-                      id="開立日期"
+                      id="today"
                       placeholder="日期"
                     />
                   </div>
@@ -310,7 +363,7 @@
                       type=""
                       class="form-control"
                       id=""
-                      placeholder="#024"
+                      placeholder="4"
                     />
                   </div>
                 </div>
@@ -346,6 +399,7 @@
                   <label for="" class="col-md-2 col-form-label">負責業務</label>
                   <div class="col-md-10">
                     <select class="form-control" id="">
+                      <option></option>
                       <option>A</option>
                       <option>B</option>
                     </select>
@@ -357,6 +411,7 @@
                   <label for="" class="col-md-2 col-form-label">負責設計</label>
                   <div class="col-md-10">
                     <select class="form-control" id="">
+                      <option></option>
                       <option>A</option>
                       <option>B</option>
                     </select>
@@ -368,6 +423,7 @@
                   <label for="" class="col-md-2 col-form-label">協助設計</label>
                   <div class="col-md-10">
                     <select class="form-control" id="">
+                      <option></option>
                       <option>A</option>
                       <option>B</option>
                     </select>
@@ -384,6 +440,7 @@
                     id="option5"
                     rows="5"
                     placeholder="請輸入內容"
+                    style="resize: vertical"
                   ></textarea>
                 </div>
               </div>
@@ -403,7 +460,7 @@
                     type=""
                     class="form-control"
                     id=""
-                    placeholder="NT$100000"
+                    placeholder=""
                   />
                 </div>
               </div>
@@ -478,8 +535,9 @@
                 <label for="" class="col-form-label col-md-2">付費方式</label>
                 <div class="col-md-10">
                   <select class="form-control" id="">
-                    <option>A</option>
-                    <option>B</option>
+                    <option>匯款</option>
+                    <option>支票</option>
+                    <option>現金</option>
                   </select>
                 </div>
               </div>
@@ -504,59 +562,6 @@
         <div class="border-top border-secondary mb-5">
           <p class="pb-3 fs-5 fw-bold pt-3">發票開立資訊</p>
           <div class="row gx-5 gy-2">
-            <div class="col-md-7">
-              <div class="row d-flex">
-                <label for="invoiceNumber" class="col-form-label col-md-2"
-                  >發票號碼</label
-                >
-                <div class="col-md-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="invoiceNumber"
-                    placeholder="PR-12912565"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-7">
-              <div class="row d-flex">
-                <label for="taxAmount" class="col-form-label col-md-2"
-                  >含稅金額</label
-                >
-                <div class="col-md-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="taxAmount"
-                    placeholder="NT$5000"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-7">
-              <div class="row d-flex">
-                <label for="invoiceNote" class="col-form-label col-md-2"
-                  >備註</label
-                >
-                <div class="col-md-10">
-                  <textarea
-                    class="form-control"
-                    id="invoiceNote"
-                    rows="5"
-                    placeholder="請輸入備註"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 發票開立資訊 -->
-        <div class="border-top border-secondary mb-5">
-          <p class="pb-3 fs-5 fw-bold pt-3">發票開立資訊</p>
-
-          <div class="row mb-3">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
@@ -583,7 +588,7 @@
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >日期
                       </label>
                     </div>
                     <div class="col-8">
@@ -591,31 +596,62 @@
                         type="text"
                         class="form-control"
                         id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        placeholder="2023/05/08"
                       />
                     </div>
                   </div>
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >含稅金額
                       </label>
                     </div>
                     <div class="col-8">
                       <input
                         type="text"
                         class="form-control"
-                        id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        id="invoicer"
+                        placeholder="NT$1500"
                       />
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="col-form-label"
+                        >發票備註
+                      </label>
+                    </div>
+                    <div class="col-8">
+                      <textarea
+                        class="form-control"
+                        id="invoiceNote"
+                        rows=""
+                        value="請輸入備註"
+                        style="resize: vertical"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-12">
+                      <!-- 這裡是其他內容，請確保只有一個上傳照片的區塊 -->
+                      <div class="form-group">
+                        <label for="photoUpload"></label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="photoUpload"
+                          multiple
+                        />
+                        <!-- 預覽圖片的正方形框 -->
+                        <div class="preview-row">
+                          <!-- 用於顯示預覽圖片的區域 -->
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row mb-3">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
@@ -642,7 +678,7 @@
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >日期
                       </label>
                     </div>
                     <div class="col-8">
@@ -650,31 +686,62 @@
                         type="text"
                         class="form-control"
                         id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        placeholder="2023/05/08"
                       />
                     </div>
                   </div>
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >含稅金額
                       </label>
                     </div>
                     <div class="col-8">
                       <input
                         type="text"
                         class="form-control"
-                        id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        id="invoicer"
+                        placeholder="NT$1500"
                       />
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="col-form-label"
+                        >發票備註
+                      </label>
+                    </div>
+                    <div class="col-8">
+                      <textarea
+                        class="form-control"
+                        id="invoiceNote"
+                        rows=""
+                        value="請輸入備註"
+                        style="resize: vertical"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-12">
+                      <!-- 這裡是其他內容，請確保只有一個上傳照片的區塊 -->
+                      <div class="form-group">
+                        <label for="photoUpload"></label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="photoUpload"
+                          multiple
+                        />
+                        <!-- 預覽圖片的正方形框 -->
+                        <div class="preview-row">
+                          <!-- 用於顯示預覽圖片的區域 -->
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row mb-3">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
@@ -701,7 +768,7 @@
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >日期
                       </label>
                     </div>
                     <div class="col-8">
@@ -709,23 +776,57 @@
                         type="text"
                         class="form-control"
                         id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        placeholder="2023/05/08"
                       />
                     </div>
                   </div>
                   <div class="row d-flex mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="col-form-label"
-                        >發票號碼
+                        >含稅金額
                       </label>
                     </div>
                     <div class="col-8">
                       <input
                         type="text"
                         class="form-control"
-                        id="invoiceNumber"
-                        placeholder="PR-12912565"
+                        id="invoicer"
+                        placeholder="NT$1500"
                       />
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="col-form-label"
+                        >發票備註
+                      </label>
+                    </div>
+                    <div class="col-8">
+                      <textarea
+                        class="form-control"
+                        id="invoiceNote"
+                        rows=""
+                        value="請輸入備註"
+                        style="resize: vertical"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row d-flex">
+                    <div class="col-12">
+                      <!-- 這裡是其他內容，請確保只有一個上傳照片的區塊 -->
+                      <div class="form-group">
+                        <label for="photoUpload"></label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="photoUpload"
+                          multiple
+                        />
+                        <!-- 預覽圖片的正方形框 -->
+                        <div class="preview-row">
+                          <!-- 用於顯示預覽圖片的區域 -->
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -752,93 +853,31 @@
       </div>
     </footer>
 
-		<!-- jQuery(CDN) -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<!-- 引用bs的js (CDN) -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-			crossorigin="anonymous"
-		></script>
+    <!-- jQuery(CDN) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
 
-    <script>
-      // 取得當前年份
-      var currentYear = new Date().getFullYear();
-
-      // 將年份顯示在頁腳中
-      document.getElementById("footer-year").innerHTML =
-        "Copyright © " + currentYear + " BORNA";
-    </script>
+    <!--  footer 获取当年日期-->
+    <script src="js/footer.js"></script>
 
     <!-- 上傳照片+刪除照片 -->
-    <script>
-      // 當選擇照片後的事件處理函式
-      document
-        .getElementById("photoUpload")
-        .addEventListener("change", function (event) {
-          event.stopPropagation(); // 停止事件傳播
+    <script src="js/uploadImages-new.js"></script>
+    <script src="js/deleteImages.js"></script>
 
-          const previewRow = document.querySelector(".preview-row");
-          previewRow.innerHTML = ""; // 清空已有的預覽
+    <!-- search bar+ form> input获取当前日期 -->
+    <script src="js/getCurrentDate.js"></script>
 
-          const maxWidth = 150; // 最大寬度，根據需要調整
-          const files = event.target.files;
-          const fileCount = files.length;
-
-          for (let i = 0; i < fileCount; i++) {
-            const file = files[i];
-            const reader = new FileReader();
-
-            reader.onloadend = function () {
-              const previewContainer = document.createElement("div");
-              previewContainer.className = "preview-container";
-
-              const img = document.createElement("img");
-              img.src = reader.result;
-              img.alt = "預覽圖片";
-              img.className = "square bg-secondary";
-
-              img.onload = function () {
-                const aspectRatio = img.width / img.height;
-                if (img.width > maxWidth) {
-                  img.width = maxWidth;
-                  img.height = maxWidth / aspectRatio;
-                }
-              };
-
-              const deleteButton = document.createElement("button");
-              deleteButton.innerText = "刪除";
-              deleteButton.className =
-                "badge bg-light text-dark border-1 delete-button mb-2";
-
-              deleteButton.addEventListener("click", function () {
-                previewRow.removeChild(previewContainer);
-              });
-
-              previewContainer.appendChild(img);
-              previewContainer.appendChild(deleteButton);
-              previewRow.appendChild(previewContainer);
-            };
-
-            if (file) {
-              reader.readAsDataURL(file);
-            }
-          }
-        });
-    </script>
-    <!-- 获取当前日期 -->
-    <script>
-      // 获取当前日期
-      const today = new Date();
-      // 将日期格式化为 YYYY-MM-DD 格式
-      const formattedDate = today.toISOString().split("T")[0];
-      // 设置输入框的默认值
-      document.getElementById("開立日期").value = formattedDate;
-    </script>
+    <!-- 改變span狀態 -->
+    <script src="js/changeSpanStatus.js"></script>
   </body>
 </html>

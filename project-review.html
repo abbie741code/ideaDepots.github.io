@@ -22,7 +22,6 @@
       crossorigin="anonymous"
     />
 
-
     <!-- 引用font awesome 6.2.1  -->
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
     <!-- 引bs-icon -->
@@ -41,6 +40,7 @@
       /* * {
         outline: 1px solid rgb(255, 173, 213);
       } */
+
     </style>
   </head>
 
@@ -50,7 +50,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand ab-logo-wrapper" href="#">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
           <img src="images/logo.svg" alt="" class="w-100" />
         </a>
 
@@ -78,13 +78,13 @@
               <a class="nav-link" href="project.html">我的專案</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">內部資源</a>
+              <a class="nav-link" href="resource.html">內部資源</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">客戶資訊</a>
+              <a class="nav-link" href="customer.html">客戶資訊</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">廠商管理</a>
+              <a class="nav-link" href="contractor.html">廠商管理</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -102,27 +102,42 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">專案支出</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">管銷費用</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">分析報告</a>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">帳號設定</a>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">業績報表</a>
                 </li>
+                <li>
+                  <a class="dropdown-item" href="#">後台管理</a>
+                </li>
               </ul>
             </li>
             <!-- <li class="nav-item">
-          <div class="rounded-avatar-container">
-            <img src="images/dog.png" alt="" >
-          </div>
-        </li> -->
+              <div class="rounded-avatar-container">
+                <img src="images/dog.png" alt="" >
+              </div>
+            </li> -->
             <!-- 大頭貼下拉選單 -->
             <li class="nav-item dropdown">
               <div
@@ -141,17 +156,17 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="staff.html">
                     <i class="fa-regular fa-user me-2"></i>個人資料
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="start-work.html">
                     <i class="fa-solid fa-location-dot me-2"></i>我要打卡
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="log-out.html">
                     <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >登出
                   </a>
@@ -166,28 +181,39 @@
     <!-- 主要內容區域 -->
     <div class="container wrapper">
       <!-- Breadcrumb -->
-      <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+      <nav
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb"
+        class="my-4"
+      >
         <ul class="breadcrumb py-3">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item" aria-current="page">10905001</li>
+          <li class="breadcrumb-item"><a href="project.html">我的專案</a></li>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="project-review.html">10905001 - ASUS Zenpad主視覺設計</a>
+          </li>
         </ul>
       </nav>
 
       <!-- icon -->
       <div>
         <a href="project-edit.html">
-          <i class="bi bi-pencil-fill large-icon me-1"></i>
+          <i class="fa fa-pencil large-icon" aria-hidden="true"></i>
         </a>
         <a href="project-review.html" onclick="printDocument(); return false;">
           <i class="bi bi-printer-fill large-icon me-1"></i>
         </a>
         <!-- 到時候download要換成此專案.pdf -->
-        <a href="" download="other-file.zip">
+        <!-- <a href="" download="other-file.zip">
           <i class="bi bi-file-earmark-arrow-down-fill large-icon"></i>
-        </a>
+        </a> -->
       </div>
 
-      <p class="py-3 fs-4 fw-bold">ASUS Zenpad主視覺設計ASUS Zenpad主視覺設計ASUS Zenpad主視覺設計</p>
+      <div class="bg-light d-flex align-items-center justify-content-between">
+        <p class="py-3 fs-4 fw-bold bg-light">ASUS Zenpad主視覺設計</p>
+        <span class="badge rounded py-1 px-2 bg-success me-2" id="statusSpan"
+          >進行中</span
+        >
+      </div>
 
       <form class="container mt-4">
         <div class="row mb-5">
@@ -196,7 +222,7 @@
               <div class="col-md-6">
                 <div class="row d-flex">
                   <label for="" class="col-md-3">專案號碼</label>
-                  <div class="col-md-9">11009001</div>
+                  <div class="col-md-9">10905001</div>
                 </div>
               </div>
               <div class="col-md-6">
@@ -266,24 +292,25 @@
                   <div class="col-md-9">Ryan Liu</div>
                 </div>
               </div>
-             
             </div>
           </div>
         </div>
 
         <!-- 內容及進度 -->
         <div class="border-top border-secondary mb-5">
-          <p class="pb-3 fs-5 fw-bold pt-3"> 內容及進度</p>
-          <p> 微軟Surface上市記者會即將舉行，屆時將推出引人矚目的新產品和創新科技。活動內容包括精彩演講、即時互動體驗及媒體交流，將為您帶來嶄新的數位體驗。敬請期待這場充滿活力的盛事！</p>
+          <p class="pb-3 fs-5 fw-bold pt-3">內容及進度</p>
+          <p>
+            微軟Surface上市記者會即將舉行，屆時將推出引人矚目的新產品和創新科技。活動內容包括精彩演講、即時互動體驗及媒體交流，將為您帶來嶄新的數位體驗。敬請期待這場充滿活力的盛事！
+          </p>
         </div>
 
         <!-- 專案支出 -->
         <div class="border-top border-secondary mb-3">
           <p class="pb-3 fs-5 fw-bold pt-3">專案支出</p>
           <div class="table-responsive">
-            <table class="table">
+            <table class="table table-striped table-hover">
               <thead class="">
-                <tr>
+                <tr class="border-bottom border-secondary">
                   <th scope="col"></th>
                   <th scope="col">支付對象</th>
                   <th scope="col">摘要</th>
@@ -295,7 +322,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="border-bottom border-light">
                   <th scope="row">1</th>
                   <td>尼克斯</td>
                   <td>筆記本印製500本</td>
@@ -305,7 +332,7 @@
                   <td>NT16871687</td>
                   <td>11000005</td>
                 </tr>
-                <tr>
+                <tr class="border-bottom border-light">
                   <th scope="row">2</th>
                   <td>尼克斯</td>
                   <td>筆記本印製500本</td>
@@ -315,7 +342,7 @@
                   <td>NT16871687</td>
                   <td>11000005</td>
                 </tr>
-                <tr>
+                <tr class="border-bottom border-light">
                   <th scope="row">3</th>
                   <td>尼克斯</td>
                   <td>筆記本印製500本</td>
@@ -330,48 +357,103 @@
           </div>
         </div>
 
-        
-
         <!-- 帳務資訊 -->
         <div class="border-1 border-top border-secondary mb-5">
           <p class="pb-3 fs-5 fw-bold pt-3">帳務資訊</p>
-          <div
-            class="d-flex fw-bold border-1 border-bottom border-secondary mb-3 fs-5 justify-content-center"
-          >
-            <p class="me-2 ">專案總金額</p>
-            <p>NT$ 1,680,000</p>
+          <div class="row border-bottom border-secondary pb-4">
+            <div class="col-md-4 border-end border-secondary">
+              <div
+                class="d-flex fw-bold mb-3 fs-5 text-nowrap justify-content-center"
+              >
+                <p class="me-2">專案總金額</p>
+                <p>NT$ 1,680,000</p>
+              </div>
+            </div>
+            <div class="col-md-4 border-end border-secondary">
+              <div
+                class="d-flex fw-bold mb-3 fs-5 text-nowrap justify-content-center"
+              >
+                <p class="me-2">支出金額</p>
+                <p>NT$ 80,000</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="d-flex fw-bold mb-3 fs-5 text-nowrap justify-content-center"
+              >
+                <p class="me-2">利潤</p>
+                <p>NT$ 1,600,000</p>
+              </div>
+            </div>
           </div>
 
-          <p class="fw-bold">上傳資料</p>
+          <p class="pb-3 fs-5 fw-bold pt-3">上傳資料</p>
+          <!-- 預覽檔案 -->
           <div class="row mb-3 gy-3 gy-md-0">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-4 col-md-2">
               <div class="">
-                <img src="images/costing.png" alt="" class="w-100" />
+                <img
+                  src="images/costing.png"
+                  alt=""
+                  class="w-100 scaled-image"
+                />
               </div>
+              <button
+                class="mt-2 badge bg-light text-dark border-1 delete-button"
+              >
+                刪除
+              </button>
               <a href="#" target="_blank" class="text-decoration-underline"
                 >20220621_報價A.pdf</a
               >
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-4 col-md-2">
               <div class="">
-                <img src="images/costing.png" alt="" class="w-100" />
+                <img
+                  src="images/costing.png"
+                  alt=""
+                  class="w-100 scaled-image"
+                />
               </div>
+              <button
+                class="mt-2 badge bg-light text-dark border-1 delete-button"
+              >
+                刪除
+              </button>
               <a href="#" target="_blank" class="text-decoration-underline"
                 >20220621_報價A.pdf</a
               >
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-4 col-md-2">
               <div class="">
-                <img src="images/costing.png" alt="" class="w-100" />
+                <img
+                  src="images/costing.png"
+                  alt=""
+                  class="w-100 scaled-image"
+                />
               </div>
+              <button
+                class="mt-2 badge bg-light text-dark border-1 delete-button"
+              >
+                刪除
+              </button>
               <a href="#" target="_blank" class="text-decoration-underline"
                 >20220621_報價A.pdf</a
               >
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-4 col-md-2">
               <div class="">
-                <img src="images/costing.png" alt="" class="w-100" />
+                <img
+                  src="images/costing.png"
+                  alt=""
+                  class="w-100 scaled-image"
+                />
               </div>
+              <button
+                class="mt-2 badge bg-light text-dark border-1 delete-button"
+              >
+                刪除
+              </button>
               <a href="#" target="_blank" class="text-decoration-underline"
                 >20220621_報價A.pdf</a
               >
@@ -379,39 +461,49 @@
           </div>
           <!-- btn -->
           <div class="d-grid mb-5">
-            <button class="btn btn-secondary w-100" type="button">
+            <a
+              class="btn btn-secondary w-100"
+              type="button"
+              href="ideaDepots-add-001-review.html"
+            >
               觀看相關照片
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- 結案資訊 -->
         <div class="border-top border-secondary mb-5">
           <p class="pb-3 fs-5 fw-bold pt-3">結案資訊</p>
-          <div class="row gx-5 gy-3">
-            <div class="col-md-6">
-              <div class="row d-flex">
-                <label for="" class="col-md-3">發票號碼</label>
-                <div class="col-md-9">PR-12912565</div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="row gy-2">
+                <div class="col-12">
+                  <div class="row d-flex">
+                    <label for="" class="col-md-2">結案日期</label>
+                    <div class="col-md-10">2023/05/08</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="row d-flex">
+                    <label for="" class="col-md-2">付費日期</label>
+                    <div class="col-md-10">2023/05/08</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row d-flex">
+                    <label for="" class="col-md-2">付費方式</label>
+                    <div class="col-md-10">匯款</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="row d-flex">
-                <label for="" class="col-md-3">結案日期</label>
-                <div class="col-md-9">2020 年 5 月 1 日</div>
+              <div class="border border-secondary p-2 overflow-scroll max-height-100">
+                結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註
+                結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註             結案備註結案備註結案備註結案備結案備註結案備註
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row d-flex">
-                <label for="" class="col-md-3">付費方式</label>
-                <div class="col-md-9">匯款</div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row d-flex">
-                <label for="" class="col-md-3">付費日期</label>
-                <div class="col-md-9">2020 年 5 月 29 日</div>
-              </div>
+  
             </div>
           </div>
         </div>
@@ -419,7 +511,8 @@
         <!-- 發票開立資訊 -->
         <div class="border-top border-secondary mb-5">
           <p class="pb-3 fs-5 fw-bold pt-3">發票開立資訊</p>
-          <div class="row mb-3">
+
+          <div class="row">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
@@ -428,87 +521,153 @@
                   Invoice1
                 </div>
                 <div class="card-body">
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="">發票號碼 </label>
                     </div>
                     <div class="col-8">PR-12912565</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">日期 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">2023/05/08</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">含稅金額 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">NT$1500</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票備註 </label>
+                    </div>
+                    <div class="col-8">5/8已結清兩不相欠</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票掃描檔</label>
+                    </div>
+                    <div class="col-8">
+                      <div class="">
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row mb-3">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
                   class="card-title border-bottom border-1 border-secondary text-center fs-4"
                 >
-                  Invoice2
+                  Invoice1
                 </div>
                 <div class="card-body">
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="">發票號碼 </label>
                     </div>
                     <div class="col-8">PR-12912565</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">日期 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">2023/05/08</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">含稅金額 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">NT$1500</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票備註 </label>
+                    </div>
+                    <div class="col-8">5/8已結清兩不相欠</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票掃描檔</label>
+                    </div>
+                    <div class="col-8">
+                      <div class="">
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row mb-3">
             <div class="col-md-4">
               <div class="card border-1 border-secondary">
                 <div
                   class="card-title border-bottom border-1 border-secondary text-center fs-4"
                 >
-                  Invoice3
+                  Invoice1
                 </div>
                 <div class="card-body">
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
                       <label for="invoiceNumber" class="">發票號碼 </label>
                     </div>
                     <div class="col-8">PR-12912565</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">日期 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">2023/05/08</div>
                   </div>
-                  <div class="row d-flex mb-2">
+                  <div class="row mb-2">
                     <div class="col-4">
-                      <label for="invoiceNumber" class="">發票號碼 </label>
+                      <label for="invoiceNumber" class="">含稅金額 </label>
                     </div>
-                    <div class="col-8">PR-12912565</div>
+                    <div class="col-8">NT$1500</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票備註 </label>
+                    </div>
+                    <div class="col-8">5/8已結清兩不相欠</div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-4">
+                      <label for="invoiceNumber" class="">發票掃描檔</label>
+                    </div>
+                    <div class="col-8">
+                      <div class="">
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                        <a href="" class="text-decoration-underline d-block"
+                          >發票123456.png</a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -516,14 +675,6 @@
           </div>
         </div>
       </form>
-
-      <!-- btn -->
-      <div class="container mt-5">
-        <div class="text-center">
-          <button type="button" class="btn btn-light me-2 px-5">取消</button>
-          <button type="button" class="btn btn-secondary px-5">儲存</button>
-        </div>
-      </div>
     </div>
 
     <!-- Footer -->
@@ -534,96 +685,29 @@
       </div>
     </footer>
 
+    <!-- jQuery(CDN) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
 
+    <!--  footer 获取当年日期-->
+    <!-- <script src="js/footer.js"></script> -->
 
-		<!-- jQuery(CDN) -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-		<!-- 引用bs的js (CDN) -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-			crossorigin="anonymous"
-		></script>
+    <!-- 上傳照片+刪除照片 -->
+    <script src="js/uploadImages-new.js"></script>
+    <script src="js/deleteImages.js"></script>
 
-    <script>
-      // 取得當前年份
-      var currentYear = new Date().getFullYear();
-
-      // 將年份顯示在頁腳中
-      document.getElementById("footer-year").innerHTML =
-        "Copyright © " + currentYear + " BORNA";
-    </script>
-
-    <!-- 上傳照片 -->
-    <script>
-      // 當選擇照片後的事件處理函式
-      document
-        .getElementById("photoUpload")
-        .addEventListener("change", function (event) {
-          event.stopPropagation(); // 停止事件傳播
-
-          const previewRow = document.querySelector(".preview-row");
-          previewRow.innerHTML = ""; // 清空已有的預覽
-
-          const maxWidth = 150; // 最大寬度，根據需要調整
-          const files = event.target.files;
-          const fileCount = files.length;
-
-          for (let i = 0; i < fileCount; i++) {
-            const file = files[i];
-            const reader = new FileReader();
-
-            reader.onloadend = function () {
-              const previewContainer = document.createElement("div");
-              previewContainer.className = "preview-container";
-
-              const img = document.createElement("img");
-              img.src = reader.result;
-              img.alt = "預覽圖片";
-              img.className = "square bg-secondary";
-
-              img.onload = function () {
-                const aspectRatio = img.width / img.height;
-                if (img.width > maxWidth) {
-                  img.width = maxWidth;
-                  img.height = maxWidth / aspectRatio;
-                }
-              };
-
-              const deleteButton = document.createElement("button");
-              deleteButton.innerText = "刪除";
-              deleteButton.className =
-                "badge bg-light text-dark border-1 delete-button mb-2";
-
-              deleteButton.addEventListener("click", function () {
-                previewRow.removeChild(previewContainer);
-              });
-
-              previewContainer.appendChild(img);
-              previewContainer.appendChild(deleteButton);
-              previewRow.appendChild(previewContainer);
-            };
-
-            if (file) {
-              reader.readAsDataURL(file);
-            }
-          }
-        });
-    </script>
-    <!-- footer获取当前日期 -->
-    <script>
-      // 获取当前日期
-      const today = new Date();
-      // 将日期格式化为 YYYY-MM-DD 格式
-      const formattedDate = today.toISOString().split("T")[0];
-      // 设置输入框的默认值
-      document.getElementById("開立日期").value = formattedDate;
-    </script>
+    <!-- search bar+ form> input获取当前日期 -->
+    <!-- <script src="js/getCurrentDate.js"></script> -->
 
     <!-- 列印功能 -->
     <script>
