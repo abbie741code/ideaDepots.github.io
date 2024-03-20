@@ -1,5 +1,5 @@
 :root {
-	--main-color:  #646464;
+  --main-color: #646464;
 }
 
 html,
@@ -83,12 +83,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -103,34 +103,34 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 h1,
@@ -144,86 +144,83 @@ p,
 div,
 textarea,
 button {
-	font-family: 微軟正黑體, sans-serif;
-	color: #5C5C5C;
-	/* word-break: break-all; */
+  font-family: 微軟正黑體, sans-serif;
+  color: #5c5c5c;
+  word-break: break-all;
 }
 
 textarea {
-	resize: none;
+  resize: none;
 }
 
 img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 b {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /* 移除各瀏覽器的內建樣式 */
 input[type="text"] {
-	-webkit-appearance: none;
-	/* Safari 和 Chrome，常用於iOS下移除內建樣式 */
-	-moz-appearance: none;
-	/* FireFox */
-	appearance: none;
+  -webkit-appearance: none;
+  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+  -moz-appearance: none;
+  /* FireFox */
+  appearance: none;
 }
 
 select,
 input {
-	background-color: #fff;
-	border-radius: 5px;
-	border: 1px solid #c1c1c1;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #c1c1c1;
 }
 
 select {
-	width: 100%;
+  width: 100%;
 }
 
 select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	position: relative;
-	background: url('../images/select-form-arrow.svg') no-repeat;
-	background-position: right center;
-
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background: url("../images/select-form-arrow.svg") no-repeat;
+  background-position: right center;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
-
-.fs-12{
-	font-size: 12px;
+.fs-12 {
+  font-size: 12px;
 }
 
-.fs-14{
-	font-size: 14px;
+.fs-14 {
+  font-size: 14px;
 }
 
-
-.fs-18{
-	font-size: 18px;
+.fs-18 {
+  font-size: 18px;
 }
 
-.fs-28{
-	font-size: 28px;
+.fs-28 {
+  font-size: 28px;
 }
 
-.fs-16{
-	font-size: 16px;
+.fs-16 {
+  font-size: 16px;
 }
-
 
 /* footer置底 */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -238,7 +235,23 @@ body {
   background-color: gray; /*1️⃣footer拿走footer的空間*/
 }
 
-
-body,p {
+body,
+p {
   line-height: 1.6 !important; /* 調整行高的數值，根據需要調整 */
 }
+
+.ab-mt-negative-2 {
+  margin-top: -0.5rem;
+}
+.ab-mt-negative-3 {
+  margin-top: -1rem;
+}
+
+.ab-mt-negative-4 {
+  margin-top: -1.5rem;
+}
+
+
+
+.dataTables_length,div.dataTables_filter {
+  display: none;}
