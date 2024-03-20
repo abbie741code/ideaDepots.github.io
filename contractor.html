@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdeaDepots</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <!-- 引bs-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- jQuery(CDN) DataTable的query必引用 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- datatable RWD js -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script
+      src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"
+      ;
+    ></script>
+
+    <!-- datatable css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css"
+    />
+    <!-- datatable js -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <!-- datatable RWD css -->
+    <link
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+    <link
+      href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css"
+    />
+
+    <!-- datatable bs css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="    https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css"
+    />
+
+    <!-- css link (自定義的表格css位置,要放在最後面)-->
+    <link rel="stylesheet" href="DataTables/ab-dataTables.css" />
+
+    <!-- css link (bs) 8/23引用後發現有奇怪線條-->
+    <!-- <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.css" /> -->
+
+    <!-- 引用bs的css (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- 自行設定css(我的專案reset要擺在最下面 不然功能列的icon會有奇怪樣式) -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* * {
+        outline: 1px solid rgb(255, 173, 213);
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
+          <img src="images/logo.svg" alt="" class="w-100" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse me-md-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">點子倉庫</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">我的專案</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resource.html">內部資源</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer.html">客戶資訊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contractor.html">廠商管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                經營管理
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">業績報表</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">後台管理</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <div class="rounded-avatar-container">
+                <img src="images/dog.png" alt="" >
+              </div>
+            </li> -->
+            <!-- 大頭貼下拉選單 -->
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-toggle ab-avatar-container"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="images/dog.png" alt="" />
+              </div>
+              <!-- 避免下拉式選單被右側吃掉 -->
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="staff.html">
+                    <i class="fa-regular fa-user me-2"></i>個人資料
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="start-work.html">
+                    <i class="fa-solid fa-location-dot me-2"></i>我要打卡
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="log-out.html">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主要內容區域 -->
+    <div class="container wrapper">
+      <!-- search bar -->
+      <div class="my-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="input-group">
+              <!-- 左邊的輸入框 -->
+              <input
+                type="text"
+                class="form-control rounded me-2"
+                placeholder="請輸入搜尋內容..."
+              />
+              <div class="input-group-append">
+                <!-- 圓形的搜尋圖示 -->
+                <button
+                  class="btn btn-secondary rounded-circle me-1 circle-btn-40"
+                  type="button"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- title:我的專案 -->
+      <div class="d-flex align-items-center mb-3">
+        <p class="fs-4 m-0">廠商資料</p>
+        <!-- 增加的圖示 -->
+        <a
+          class="btn btn-secondary rounded-circle ms-2 circle-btn-30 d-flex justify-content-center align-items-center"
+          href="contractor-add.html"
+        >
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+      <p class="mb-2 fs-14">*以合作數量為順序排列，專案數多者置頂。</p>
+
+      <!-- RWD表格 (css待調整)-->
+      <table
+        id="myTable"
+        class="display hover stripe nowrap"
+        style="width: 100%"
+      >
+        <thead>
+          <tr>
+            <th data-priority="1">簡稱</th>
+            <th>抬頭</th>
+            <th data-priority="2">統一編號</th>
+            <th>電話</th>
+            <th>服務內容</th>
+            <th>功能</th>
+          </tr>
+        </thead>
+
+        <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">您確定要刪除嗎？</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  取消
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  onclick="deleteItem()"
+                >
+                  刪除
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <tbody>
+          <tr>
+            <td>星霖</td>
+            <td>星霖印刷有限公司</td>
+            <td>9961234</td>
+            <td>02-8777-8777</td>
+            <td>道具製作</td>
+            <td>
+              <a href="contractor-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="contractor-edit.html" class="">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>星霖</td>
+            <td>星霖印刷有限公司</td>
+            <td>9961234</td>
+            <td>02-8777-8777</td>
+            <td>道具製作</td>
+            <td>
+              <a href="contractor-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="contractor-edit.html" class="">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white p-3 mt-4 text-center border-top">
+      <div class="container-fluid">
+        <!-- 自動帶入年份 -->
+        <p class="text-secondary" id="footer-year"></p>
+      </div>
+    </footer>
+
+    <!-- jQuery(CDN) -->
+    <!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+			integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script> -->
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--  footer 获取当年日期-->
+    <script src="js/footer.js"></script>
+
+    <!-- DataTable.js -->
+    <script>
+      $(document).ready(function () {
+        $("#myTable").DataTable({
+          //中文化
+          language: {
+            processing: "處理中...",
+            loadingRecords: "載入中...",
+            paginate: {
+              first: "第一頁",
+              previous: "上一頁",
+              next: "下一頁",
+              last: "最後一頁",
+            },
+            emptyTable: "目前沒有資料",
+            datetime: {
+              previous: "上一頁",
+              next: "下一頁",
+              hours: "時",
+              minutes: "分",
+              seconds: "秒",
+              amPm: ["上午", "下午"],
+              unknown: "未知",
+              weekdays: [
+                "週日",
+                "週一",
+                "週二",
+                "週三",
+                "週四",
+                "週五",
+                "週六",
+              ],
+              months: [
+                "一月",
+                "二月",
+                "三月",
+                "四月",
+                "五月",
+                "六月",
+                "七月",
+                "八月",
+                "九月",
+                "十月",
+                "十一月",
+                "十二月",
+              ],
+            },
+            searchBuilder: {
+              add: "新增條件",
+              condition: "條件",
+              deleteTitle: "刪除過濾條件",
+              button: {
+                _: "複合查詢 (%d)",
+                0: "複合查詢",
+              },
+              clearAll: "清空",
+              conditions: {
+                array: {
+                  contains: "含有",
+                  equals: "等於",
+                  empty: "空值",
+                  not: "不等於",
+                  notEmpty: "非空值",
+                  without: "不含",
+                },
+                date: {
+                  after: "大於",
+                  before: "小於",
+                  between: "在其中",
+                  empty: "為空",
+                  equals: "等於",
+                  not: "不為",
+                  notBetween: "不在其中",
+                  notEmpty: "不為空",
+                },
+                number: {
+                  between: "在其中",
+                  empty: "為空",
+                  equals: "等於",
+                  gt: "大於",
+                  gte: "大於等於",
+                  lt: "小於",
+                  lte: "小於等於",
+                  not: "不為",
+                  notBetween: "不在其中",
+                  notEmpty: "不為空",
+                },
+                string: {
+                  contains: "含有",
+                  empty: "為空",
+                  endsWith: "字尾為",
+                  equals: "等於",
+                  not: "不為",
+                  notEmpty: "不為空",
+                  startsWith: "字首為",
+                  notContains: "不含",
+                  notStartsWith: "開頭不是",
+                  notEndsWith: "結尾不是",
+                },
+              },
+              data: "欄位",
+              leftTitle: "群組條件",
+              logicAnd: "且",
+              logicOr: "或",
+              rightTitle: "取消群組",
+              title: {
+                _: "複合查詢 (%d)",
+                0: "複合查詢",
+              },
+              value: "內容",
+            },
+            editor: {
+              close: "關閉",
+              create: {
+                button: "新增",
+                title: "新增資料",
+                submit: "送出新增",
+              },
+              remove: {
+                button: "刪除",
+                title: "刪除資料",
+                submit: "送出刪除",
+                confirm: {
+                  _: "您確定要刪除您所選取的 %d 筆資料嗎？",
+                  1: "您確定要刪除您所選取的 1 筆資料嗎？",
+                },
+              },
+              error: {
+                system: "系統發生錯誤(更多資訊)",
+              },
+              edit: {
+                button: "修改",
+                title: "修改資料",
+                submit: "送出修改",
+              },
+              multi: {
+                title: "多重值",
+                info: "您所選擇的多筆資料中，此欄位包含了不同的值。若您想要將它們都改為同一個值，可以在此輸入，要不然它們會保留各自原本的值。",
+                restore: "復原",
+                noMulti: "此輸入欄需單獨輸入，不容許多筆資料一起修改",
+              },
+            },
+            autoFill: {
+              cancel: "取消",
+            },
+            buttons: {
+              copySuccess: {
+                _: "複製了 %d 筆資料",
+                1: "複製了 1 筆資料",
+              },
+              copyTitle: "已經複製到剪貼簿",
+              excel: "Excel",
+              pdf: "PDF",
+              print: "列印",
+              copy: "複製",
+              colvis: "欄位顯示",
+              colvisRestore: "重置欄位顯示",
+              csv: "CSV",
+              pageLength: {
+                "-1": "顯示全部",
+                _: "顯示 %d 筆",
+              },
+              createState: "建立狀態",
+              removeAllStates: "移除所有狀態",
+              removeState: "移除",
+              renameState: "重新命名",
+              savedStates: "儲存狀態",
+              stateRestore: "狀態 %d",
+              updateState: "更新",
+            },
+            searchPanes: {
+              collapse: {
+                _: "搜尋面版 (%d)",
+                0: "搜尋面版",
+              },
+              emptyPanes: "沒搜尋面版",
+              loadMessage: "載入搜尋面版中...",
+              clearMessage: "清空",
+              count: "{total}",
+              countFiltered: "{shown} ({total})",
+              title: "過濾條件 - %d",
+              showMessage: "顯示全部",
+              collapseMessage: "摺疊全部",
+            },
+            stateRestore: {
+              emptyError: "名稱不能空白。",
+              creationModal: {
+                button: "建立",
+                columns: {
+                  search: "欄位搜尋",
+                  visible: "欄位顯示",
+                },
+                name: "名稱：",
+                order: "排序",
+                paging: "分頁",
+                scroller: "卷軸位置",
+                search: "搜尋",
+                searchBuilder: "複合查詢",
+                select: "選擇",
+                title: "建立新狀態",
+                toggleLabel: "包含：",
+              },
+              duplicateError: "此狀態名稱已經存在。",
+              emptyStates: "名稱不可空白。",
+              removeConfirm: "確定要移除 %s 嗎？",
+              removeError: "移除狀態失敗。",
+              removeJoiner: "和",
+              removeSubmit: "移除",
+              removeTitle: "移除狀態",
+              renameButton: "重新命名",
+              renameLabel: "%s 的新名稱：",
+              renameTitle: "重新命名狀態",
+            },
+            select: {
+              columns: {
+                _: "選擇了 %d 欄資料",
+                1: "選擇了 1 欄資料",
+              },
+              rows: {
+                1: "選擇了 1 筆資料",
+                _: "選擇了 %d 筆資料",
+              },
+              cells: {
+                1: "選擇了 1 格資料",
+                _: "選擇了 %d 格資料",
+              },
+            },
+            zeroRecords: "沒有符合的資料",
+            aria: {
+              sortAscending: "：升冪排列",
+              sortDescending: "：降冪排列",
+            },
+            info: "顯示第 _START_ 至 _END_ 筆結果，共 _TOTAL_ 筆",
+            infoEmpty: "顯示第 0 至 0 筆結果，共 0 筆",
+            infoFiltered: "(從 _MAX_ 筆結果中過濾)",
+            infoThousands: ",",
+            lengthMenu: "顯示 _MENU_ 筆結果",
+            search: "搜尋：",
+            searchPlaceholder: "請輸入關鍵字",
+            thousands: ",",
+          },
+          //要rwd （新增功能）
+          responsive: true,
+          //priority（新增功能）
+          columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 2, targets: -1 },
+            { responsivePriority: 3, targets: -2 },
+            { responsivePriority: 4, targets: -3 },
+          ],
+        });
+      });
+    </script>
+
+    <!-- 刪除整條tr（使用 Bootstrap modal 詢問確認） -->
+    <script>
+      // 等待文檔完全載入後執行 JavaScript 代碼
+      document.addEventListener("DOMContentLoaded", function () {
+        // 選擇所有具有 "delete-row" 類名的刪除鏈接
+        const deleteLinks = document.querySelectorAll(".delete-row");
+
+        // 遍歷每個刪除鏈接，為其添加點擊事件處理程序
+        deleteLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // 防止默認鏈接行為
+
+            // 阻止事件冒泡
+            event.stopPropagation();
+
+            // 獲取相關元素
+            const row = link.closest("tr"); // 找到最近的 <tr> 元素
+            const modal = new bootstrap.Modal(
+              document.getElementById("deleteModal")
+            ); // 初始化模態框
+
+            // 顯示模態框
+            modal.show();
+
+            // 监听模态框中的删除按钮点击事件
+            const deleteButton = document.getElementById("confirmDeleteButton");
+            deleteButton.addEventListener("click", function () {
+              // 提示確認是否刪除
+              const confirmed = confirm("確定要刪除嗎?");
+              if (confirmed) {
+                row.remove(); // 從DOM中移除 <tr> 元素
+              }
+              modal.hide(); // 隱藏模態框
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- search bar获取当前日期 -->
+    <script src="js/getCurrentDate.js"></script>
+  </body>
+</html>

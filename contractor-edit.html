@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdeaDepots</title>
+
+    <!-- 網址縮圖 -->
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="images/share.jpg" />
+    <meta name="description" content="#" />
+
+    <!-- 引用bs的css (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- 引用font awesome 6.2.1  -->
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <!-- 引bs-icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 引用favicon (local自行放） -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- 自行設定css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
+          <img src="images/logo.svg" alt="" class="w-100" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse me-md-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">點子倉庫</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">我的專案</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resource.html">內部資源</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer.html">客戶資訊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contractor.html">廠商管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                經營管理
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">業績報表</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">後台管理</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <div class="rounded-avatar-container">
+                <img src="images/dog.png" alt="" >
+              </div>
+            </li> -->
+            <!-- 大頭貼下拉選單 -->
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-toggle ab-avatar-container"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="images/dog.png" alt="" />
+              </div>
+              <!-- 避免下拉式選單被右側吃掉 -->
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="staff.html">
+                    <i class="fa-regular fa-user me-2"></i>個人資料
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="start-work.html">
+                    <i class="fa-solid fa-location-dot me-2"></i>我要打卡
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="log-out.html">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主要內容區域 -->
+    <div class="container wrapper">
+      <!-- Breadcrumb -->
+      <nav
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb"
+        class="my-4"
+      >
+        <ul class="breadcrumb py-3">
+          <li class="breadcrumb-item">
+            <a href="contractor.html">我的廠商</a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="contractor-review.html">星霖印刷有限公司</a>
+          </li>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="contractor-edit.html">編輯廠商</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- alert -->
+      <div class="alert alert-success d-flex align-items-center" role="alert">
+        <div class="alert-link d-flex align-items-center">
+          <svg
+            class="me-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+            ></path>
+          </svg>
+        </div>
+        <div class="alert-link">編輯廠商成功！</div>
+      </div>
+
+      <!-- icon -->
+      <div>
+        <!-- <a href="customer-edit.html">
+          <i class="bi bi-pencil-fill large-icon me-1"></i>
+        </a> -->
+        <!-- <a href="customer-review.html" onclick="printDocument(); return false;">
+          <i class="bi bi-printer-fill large-icon me-1"></i>
+        </a> -->
+        <!-- 到時候download要換成此專案.pdf -->
+        <!-- <a href="" download="other-file.zip">
+            <i class="bi bi-file-earmark-arrow-down-fill large-icon"></i>
+          </a> -->
+        <!-- 暫停 -->
+        <!-- <a>
+          <i class="bi bi-stop-circle-fill large-icon me-1"></i>
+        </a> -->
+        <!-- 結案 -->
+        <!-- <a>
+          <i class="bi bi-check-circle-fill large-icon me-1"></i>
+        </a> -->
+      </div>
+
+      <!-- title -->
+      <div
+        class="border-bottom border-secondary pb-3 d-flex align-items-center justify-content-between"
+      >
+        <p class="fs-4 fw-bold">編輯廠商</p>
+        <span class="badge rounded py-1 px-2" id="statusSpan">中止</span>
+      </div>
+
+      <form class="container mt-4">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="row gx-5 gy-3">
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >中文抬頭*
+                  </label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="星霖印刷有限公司"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >英文抬頭*
+                  </label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="XING LIN PRINTING CO., LTD.."
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label">簡稱*</label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="XING LIN"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >建檔日期*</label
+                  >
+                  <div class="col-md-10">
+                    <input
+                      type="date"
+                      class="form-control"
+                      value="2018-08-01"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-form-label col-md-2">地址</label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="台北市信義區信義路三段168號5樓"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >統一編號
+                  </label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="28672416"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label">網址</label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="www.bmd.com.tw"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label">公司電話</label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="02-2704-3024"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >付款方式
+                  </label>
+                  <div class="col-md-10">
+                    <select class="form-control" id="">
+                      <option>匯款</option>
+                      <option>支票</option>
+                      <option>現金</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex">
+                  <label for="" class="col-md-2 col-form-label"
+                    >付款天數
+                  </label>
+                  <div class="col-md-10">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="月結90天"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 備註事項 -->
+        <div class="border-top border-secondary mb-5">
+          <p class="pb-3 fs-5 fw-bold pt-3">備註事項</p>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                class="form-control"
+                id="option5"
+                rows="5"
+                value="請輸入內容"
+                style="resize: vertical"
+              >
+Ansys電動車上市記者會即將舉行，屆時將推出引人矚目的新產品和創新科技。活動內容包括精彩演講、即時互動體驗及媒體交流，將為您帶來嶄新的數位體驗。敬請期待這場充滿活力的盛事！
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 聯繫窗口 -->
+        <div class="border-top border-secondary mb-5">
+          <p class="pb-3 fs-5 fw-bold pt-3">聯繫窗口</p>
+          <div class="d-flex justify-content-end mb-2">
+            <button
+              id="addRowButton"
+              type="button"
+              class="btn btn-secondary px-5"
+            >
+              新增窗口
+            </button>
+          </div>
+
+          <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">您確定要刪除嗎？</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    取消
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onclick="deleteItem()"
+                  >
+                    刪除
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead class="">
+                <tr class="border-bottom border-secondary">
+                  <th scope="col">中文姓名</th>
+                  <th scope="col">英文姓名</th>
+                  <th scope="col">職稱</th>
+                  <th scope="col">分機</th>
+                  <th scope="col">行動電話</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">狀態</th>
+                  <th scope="col">特殊備註</th>
+                  <th scope="col">功能</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-bottom border-light">
+                  <td>
+                    <input type="" class="form-control" id="" value="林俊勝" />
+                  </td>
+                  <td>
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="Jason Lin"
+                    />
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="經理" />
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="55678" />
+                  </td>
+                  <td class="ab-w-15">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="0922-817-167"
+                    />
+                  </td>
+                  <td class="ab-w-22">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="Jason@borna.com.tw"
+                    />
+                  </td>
+                  <td class="ab-w-10">
+                    <select class="form-control d-flex">
+                      <option>在職中</option>
+                      <option>已離職</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="愛喝酒" />
+                  </td>
+                  <td>
+                    <button
+                      href="#"
+                      class="border-0 bg-transparent delete-row"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr class="border-bottom border-light">
+                  <td>
+                    <input type="" class="form-control" id="" value="林俊勝" />
+                  </td>
+                  <td>
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="Jason Lin"
+                    />
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="經理" />
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="55678" />
+                  </td>
+                  <td class="ab-w-15">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="0922-817-167"
+                    />
+                  </td>
+                  <td class="ab-w-22">
+                    <input
+                      type=""
+                      class="form-control"
+                      id=""
+                      value="Jason@borna.com.tw"
+                    />
+                  </td>
+                  <td class="ab-w-10">
+                    <select class="form-control d-flex">
+                      <option>在職中</option>
+                      <option>已離職</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="" class="form-control" id="" value="愛喝酒" />
+                  </td>
+                  <td>
+                    <button
+                      href="#"
+                      class="border-0 bg-transparent delete-row"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- btn -->
+        <div class="row">
+          <div class="container mt-5">
+            <div class="text-center">
+              <button type="button" class="btn btn-light me-2 px-5">
+                取消
+              </button>
+              <button type="button" class="btn btn-secondary px-5">儲存</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white p-3 mt-4 text-center border-top">
+      <div class="container-fluid">
+        <!-- 自動帶入年份 -->
+        <p class="text-secondary" id="footer-year"></p>
+      </div>
+    </footer>
+
+    <!-- 引用bs的js (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 一引用navbar的下拉式選單會失效 -->
+    <!-- jq-3.6.0.js & popper.js & bs.js (local自行放） -->
+    <!-- <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script> -->
+
+    <!-- search bar/ input 获取当前日期 -->
+    <script src="js/getCurrentDate.js"></script>
+
+    <!--  footer 获取当年日期-->
+    <script src="js/footer.js"></script>
+
+    <!-- 上傳照片+刪除照片 -->
+    <script src="js/uploadImages-new.js"></script>
+    <script src="js/deleteImages.js"></script>
+
+    <!-- 改變span狀態 -->
+    <script src="js/changeSpanStatus.js"></script>
+
+    <!-- 增加table --->
+    <script src="js/addTable.js"></script>
+
+    <!-- 刪除整條tr（使用 Bootstrap modal 詢問確認） -->
+    <script>
+      // 等待文檔完全載入後執行 JavaScript 代碼
+      document.addEventListener("DOMContentLoaded", function () {
+        // 選擇所有具有 "delete-row" 類名的刪除鏈接
+        const deleteLinks = document.querySelectorAll(".delete-row");
+
+        // 遍歷每個刪除鏈接，為其添加點擊事件處理程序
+        deleteLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault(); // 防止默認鏈接行為
+
+            // 阻止事件冒泡
+            event.stopPropagation();
+
+            // 獲取相關元素
+            const row = link.closest("tr"); // 找到最近的 <tr> 元素
+            const modal = new bootstrap.Modal(
+              document.getElementById("deleteModal")
+            ); // 初始化模態框
+
+            // 顯示模態框
+            modal.show();
+
+            // 监听模态框中的删除按钮点击事件
+            const deleteButton = document.getElementById("confirmDeleteButton");
+            deleteButton.addEventListener("click", function () {
+              // 提示確認是否刪除
+              const confirmed = confirm("確定要刪除嗎?");
+              if (confirmed) {
+                row.remove(); // 從DOM中移除 <tr> 元素
+              }
+              modal.hide(); // 隱藏模態框
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
