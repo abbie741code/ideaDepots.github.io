@@ -46,135 +46,138 @@
   <body>
     <!-- Header -->
     <nav
-     class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
-   >
-     <div class="container-fluid">
-       <a class="navbar-brand ab-logo-wrapper" href="index.html">
-         <img src="images/logo.svg" alt="" class="w-100" />
-       </a>
+      class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand ab-logo-wrapper ms-md-1" href="index.html">
+          <img src="images/logo.svg" alt="" class=" " />
+        </a>
 
-       <button
-         class="navbar-toggler"
-         type="button"
-         data-bs-toggle="collapse"
-         data-bs-target="#navbarSupportedContent"
-         aria-controls="navbarSupportedContent"
-         aria-expanded="false"
-         aria-label="Toggle navigation"
-       >
-         <span class="navbar-toggler-icon"></span>
-       </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-       <div
-         class="collapse navbar-collapse me-md-1"
-         id="navbarSupportedContent"
-       >
-         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-           <li class="nav-item">
-             <a class="nav-link active" href="index.html">點子倉庫</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="project.html">我的專案</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="resource.html">內部資源</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="customer.html">客戶資訊</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="contractor.html">廠商管理</a>
-           </li>
-           <li class="nav-item dropdown">
-             <a
-               class="nav-link dropdown-toggle"
-               href="#"
-               id="navbarDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false"
-             >
-               經營管理
-             </a>
-             <ul
-               class="dropdown-menu dropdown-menu-end fs-14"
-               aria-labelledby="navbarDropdown"
-             >
-               <li>
-                 <a
-                   class="dropdown-item mb-1"
-                   href="manage-project-expense.html"
-                   >專案支出</a
-                 >
-               </li>
-               <li>
-                 <a
-                   class="dropdown-item mb-1"
-                   href="manage-general-expense.html"
-                   >管銷費用</a
-                 >
-               </li>
-               <li>
-                 <a class="dropdown-item mb-1" href="manage-analysis.html"
-                   >分析報告</a
-                 >
-               </li>
-               <li>
-                 <a class="dropdown-item mb-1" href="manage-staff.html"
-                   >人員管理</a
-                 >
-               </li>
-               <li>
-                 <a class="dropdown-item" href="#">業績報表</a>
-               </li>
-               <li>
-                 <a class="dropdown-item" href="#">後台管理</a>
-               </li>
-             </ul>
-           </li>
-           <!-- <li class="nav-item">
-             <div class="rounded-avatar-container">
-               <img src="images/dog.png" alt="" >
-             </div>
-           </li> -->
-           <!-- 大頭貼下拉選單 -->
-           <li class="nav-item dropdown">
-             <div
-               class="dropdown-toggle ab-avatar-container"
-               href="#"
-               id="navbarDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false"
-             >
-               <img src="images/dog.png" alt="" />
-             </div>
-             <!-- 避免下拉式選單被右側吃掉 -->
-             <ul
-               class="dropdown-menu dropdown-menu-end fs-14"
-               aria-labelledby="navbarDropdown"
-             >
-               <li>
-                 <a class="dropdown-item mb-1" href="staff.html">
-                   <i class="fa-regular fa-user me-2"></i>個人資料
-                 </a>
-               </li>
-               <li>
-                 <a class="dropdown-item mb-1" href="start-work.html">
-                   <i class="fa-solid fa-location-dot me-2"></i>我要打卡
-                 </a>
-               </li>
-               <li>
-                 <a class="dropdown-item" href="log-out.html">
-                   <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
-                   >登出
-                 </a>
-               </li>
-             </ul>
-           </li>
-         </ul>
-       </div>
-     </div>
+        <div
+          class="collapse navbar-collapse me-md-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">點子倉庫</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html">我的專案</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resource.html">內部資源</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer.html">客戶資訊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contractor.html">廠商管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">後台管理</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                經營管理
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contractor.html">廠商管理</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">後台管理</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <div class="rounded-avatar-container">
+                <img src="images/dog.png" alt="" >
+              </div>
+            </li> -->
+            <!-- 大頭貼下拉選單 -->
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-toggle ab-avatar-container"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="images/dog.png" alt="" />
+              </div>
+              <!-- 避免下拉式選單被右側吃掉 -->
+              <ul
+                class="dropdown-menu dropdown-menu-end fs-14"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a class="dropdown-item mb-1" href="staff.html">
+                    <i class="fa-regular fa-user me-2"></i>個人資料
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item mb-1" href="start-work.html">
+                    <i class="fa-solid fa-location-dot me-2"></i>我要打卡
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="log-out.html">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
+                    >登出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- 主要內容區域 -->
@@ -186,13 +189,20 @@
         class="my-4"
       >
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">新增知識庫</li>
+          <li class="breadcrumb-item"><a href="index.html">ideaDepots</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="ideaDepots-add-001-review.html">
+              ASUS Zenpad主視覺設計主主視覺設計
+            </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="#">編輯知識庫資料</a>
+          </li>
         </ol>
       </nav>
 
       <p class="border-bottom border-secondary pb-3 fs-4 fw-bold">
-        新增知識庫
+        編輯知識庫資料
       </p>
 
       <form class="container mt-4">
@@ -227,18 +237,15 @@
             </div>
 
             <div class="row mb-3">
-              <label
-                for="add-projectNumber"
-                class="col-sm-4 col-form-label text-nowrap"
+              <label for="option1" class="col-sm-4 col-form-label text-nowrap"
                 >專案編號*</label
               >
               <div class="col-sm-8">
                 <input
                   type="text"
                   class="form-control"
-                  data-bs-toggle="modal"
-                  data-bs-target="#add-projectNumber"
-                  value=""
+                  id="option3"
+                  value="10908001"
                 />
               </div>
             </div>
@@ -253,7 +260,8 @@
                   id="option5"
                   rows="4"
                   style="resize: vertical"
-                ></textarea
+                >
+ASUS Zenpad主視覺設計主主視覺設計</textarea
                 >
               </div>
             </div>
@@ -269,7 +277,7 @@
                   rows="5"
                   style="resize: vertical"
                 >
-                </textarea
+說明說明說明說明說明說明說明說明</textarea
                 >
               </div>
             </div>
@@ -320,7 +328,7 @@
               </div>
             </div>
             <!-- 預覽照片示意圖 -->
-            <!-- <div class="row mb-3 gy-3 gy-md-0">
+            <div class="row mb-3 gy-3 gy-md-0">
               <div class="col-sm-6 col-md-2">
                 <div class="">
                   <img
@@ -393,7 +401,7 @@
                   >20220621_報價A.pdf</a
                 >
               </div>
-            </div> -->
+            </div>
           </div>
 
           <!-- btn -->
@@ -408,142 +416,143 @@
         </div>
       </form>
 
+
       <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
       <div
-        class="modal fade"
-        id="add-projectNumber"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">選擇專案＃</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-2 border-bottom border-light">
-                <p>年份</p>
-                <div style="cursor: pointer" class="mb-2">
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >2020</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >2021</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >2022</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >2023</span
-                  >
-                </div>
-              </div>
-              <div class="mb-2 border-bottom border-light">
-                <p>月份</p>
-                <div style="cursor: pointer" class="mb-2">
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >1月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >2月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >3月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >4月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >5月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >6月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >7月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >8月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >9月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >10月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >11月</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >12月</span
-                  >
-                </div>
-              </div>
-              <div class="mb-2 border-bottom border-light">
-                <p>專案＃</p>
-                <div style="cursor: pointer" class="mb-2">
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >xxxxxxxxx</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >xxxxxxxxx</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >xxxxxxxxx</span
-                  >
-                  <span
-                    class="badge rounded bg-light text-secondary py-1 px-2 selectable"
-                    >xxxxxxxxx</span
-                  >
-                </div>
+      class="modal fade"
+      id="add-projectNumber"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">選擇專案＃</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-2 border-bottom border-light">
+              <p>年份</p>
+              <div style="cursor: pointer" class="mb-2">
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >2020</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >2021</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >2022</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >2023</span
+                >
               </div>
             </div>
-            <div class="modal-footer">
-              <div class="mx-auto">
-                <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                取消
-              </button>
-              <button
-                type="button"
-                class="btn btn-danger"
-                onclick="deleteItem()"
-              >
-                確定
-              </button>
+            <div class="mb-2 border-bottom border-light">
+              <p>月份</p>
+              <div style="cursor: pointer" class="mb-2">
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >1月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >2月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >3月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >4月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >5月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >6月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >7月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >8月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >9月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >10月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >11月</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >12月</span
+                >
+              </div>
+            </div>
+            <div class="mb-2 border-bottom border-light">
+              <p>專案＃</p>
+              <div style="cursor: pointer" class="mb-2">
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >xxxxxxxxx</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >xxxxxxxxx</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >xxxxxxxxx</span
+                >
+                <span
+                  class="badge rounded bg-light text-secondary py-1 px-2 selectable"
+                  >xxxxxxxxx</span
+                >
               </div>
             </div>
           </div>
+          <div class="modal-footer">
+            <div class="mx-auto">
+              <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              onclick="deleteItem()"
+            >
+              確定
+            </button>
+            </div>
+          </div>
         </div>
+      </div>
       </div>
     </div>
 
