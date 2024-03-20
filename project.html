@@ -92,6 +92,15 @@
       /* * {
         outline: 1px solid rgb(255, 173, 213);
       } */
+
+      /* 隐藏筛选图标 */
+      .dataTables_filter {
+        display: none;
+      }
+
+      .sort-icon {
+        display: none !important;
+      }
     </style>
   </head>
 
@@ -101,7 +110,7 @@
       class="navbar navbar-expand-lg navbar-light bg-light border-bottom fs-14 px-1 px-md-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand ab-logo-wrapper" href="#">
+        <a class="navbar-brand ab-logo-wrapper" href="index.html">
           <img src="images/logo.svg" alt="" class="w-100" />
         </a>
 
@@ -129,13 +138,13 @@
               <a class="nav-link" href="project.html">我的專案</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">內部資源</a>
+              <a class="nav-link" href="resource.html">內部資源</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">客戶資訊</a>
+              <a class="nav-link" href="customer.html">客戶資訊</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">廠商管理</a>
+              <a class="nav-link" href="contractor.html">廠商管理</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -153,19 +162,34 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">專案支出</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-project-expense.html"
+                    >專案支出</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">管銷費用</a>
+                  <a
+                    class="dropdown-item mb-1"
+                    href="manage-general-expense.html"
+                    >管銷費用</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">分析報告</a>
+                  <a class="dropdown-item mb-1" href="manage-analysis.html"
+                    >分析報告</a
+                  >
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">帳號設定</a>
+                  <a class="dropdown-item mb-1" href="manage-staff.html"
+                    >人員管理</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">業績報表</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">後台管理</a>
                 </li>
               </ul>
             </li>
@@ -192,17 +216,17 @@
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="staff.html">
                     <i class="fa-regular fa-user me-2"></i>個人資料
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item mb-1" href="#">
+                  <a class="dropdown-item mb-1" href="start-work.html">
                     <i class="fa-solid fa-location-dot me-2"></i>我要打卡
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="log-out.html">
                     <i class="fa-solid fa-arrow-right-from-bracket me-2"></i
                     >登出
                   </a>
@@ -220,14 +244,24 @@
       <div class="my-4">
         <div class="row mb-1 g-2">
           <div class="col-6 col-md-3 mb-1 mb-md-2">
-            <select class="form-select" aria-label="Default select example">
-              <option value="1">2021</option>
-              <option value="2">2022</option>
-              <option value="3" selected>2023</option>
+            <select
+              id="yearSelect"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+              <option>2023</option>
             </select>
           </div>
           <div class="col-6 col-md-3 mb-1 mb-md-2">
-            <select class="form-select" aria-label="Default select example">
+            <select
+              id="monthSelect"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="0">全年度</option>
               <option value="1">1 月</option>
               <option value="2">2 月</option>
               <option value="3">3 月</option>
@@ -235,7 +269,7 @@
               <option value="5">5 月</option>
               <option value="6">6 月</option>
               <option value="7">7 月</option>
-              <option value="8" selected>8 月</option>
+              <option value="8">8 月</option>
               <option value="9">9 月</option>
               <option value="10">10 月</option>
               <option value="11">11 月</option>
@@ -312,7 +346,7 @@
         <p class="fs-4 m-0">我的專案</p>
         <!-- 增加的圖示 -->
         <a
-          class="btn btn-secondary rounded-circle ms-2 circle-btn-30 d-flex justify-content-center align-items-center"
+          class="btn btn-secondary rounded-circle ms-2"
           href="project-add.html"
         >
           <i class="fas fa-plus"></i>
@@ -346,38 +380,254 @@
             <td>Ryan</td>
             <td>Rovie</td>
             <td>NT$100000</td>
-            <td>進行中</td>
+            <td><span class="badge text-bg-success">進行中</span></td>
             <td>
               <a href="project-review.html" class="me-1">
                 <i class="bi bi-eye"></i>
               </a>
-              <a href="project-edit.html" class="me-1">
+              <a href="project-edit.html" class="">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="#" class="delete-row me-1">
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 <i class="fa-solid fa-trash-can"></i>
-              </a>
+              </button>
             </td>
+            <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">您確定要刪除嗎？</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onclick="deleteItem()"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </tr>
           <tr>
             <td>10905001</td>
             <td>ASUS</td>
-            <td>微軟主視覺設計</td>
+            <td>ASUS Zenpad主視覺設計</td>
             <td>Ryan</td>
-            <td>Abbie</td>
+            <td>Rovie</td>
             <td>NT$100000</td>
-            <td>進行中</td>
+            <td><span class="badge text-bg-secondary">已結案</span></td>
             <td>
               <a href="project-review.html" class="me-1">
                 <i class="bi bi-eye"></i>
               </a>
-              <a href="project-edit.html" class="me-1">
+              <a href="project-edit.html" class="">
                 <i class="bi bi-pencil-fill"></i>
               </a>
-              <a href="#" class="delete-row me-1">
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
                 <i class="fa-solid fa-trash-can"></i>
-              </a>
+              </button>
             </td>
+            <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">您確定要刪除嗎？</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onclick="deleteItem()"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <td>10905001</td>
+            <td>ASUS</td>
+            <td>ASUS Zenpad主視覺設計</td>
+            <td>Ryan</td>
+            <td>Rovie</td>
+            <td>NT$100000</td>
+            <td><span class="badge text-bg-danger">中止</span></td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+            <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">您確定要刪除嗎？</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onclick="deleteItem()"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </tr>
+          <tr>
+            <td>10905001</td>
+            <td>ASUS</td>
+            <td>ASUS Zenpad主視覺設計</td>
+            <td>Ryan</td>
+            <td>Rovie</td>
+            <td>NT$100000</td>
+            <td><span class="badge text-bg-success">進行中</span></td>
+            <td>
+              <a href="project-review.html" class="me-1">
+                <i class="bi bi-eye"></i>
+              </a>
+              <a href="project-edit.html" class="">
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+              <button
+                href="#"
+                class="border-0 bg-transparent delete-row"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+            <!-- Bootstrap 模態框 (delete)(與navbar的js衝突到)-->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">確認刪除</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">您確定要刪除嗎？</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      取消
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      onclick="deleteItem()"
+                    >
+                      刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </tr>
         </tbody>
       </table>
@@ -405,14 +655,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      // 取得當前年份
-      var currentYear = new Date().getFullYear();
-
-      // 將年份顯示在頁腳中
-      document.getElementById("footer-year").innerHTML =
-        "Copyright © " + currentYear + " BORNA";
-    </script>
+    <!--  footer 获取当年日期-->
+    <script src="js/footer.js"></script>
 
     <!-- DataTable.js -->
     <script>
@@ -668,32 +912,6 @@
       });
     </script>
 
-    <!-- 刪除整條tr（要查一下有什麼bug) -->
-    <script>
-      // 等待文檔完全載入後執行JavaScript代碼
-      document.addEventListener("DOMContentLoaded", function () {
-        // 選擇所有具有 "delete-row" 類名的刪除鏈接
-        const deleteLinks = document.querySelectorAll(".delete-row");
-
-        // 遍歷每個刪除鏈接，為其添加點擊事件處理程序
-        deleteLinks.forEach((link) => {
-          link.addEventListener("click", function (event) {
-            event.preventDefault(); // 防止默認鏈接行為
-
-            // 阻止事件冒泡
-            event.stopPropagation();
-
-            // 提示確認是否刪除
-            const confirmed = confirm("確定要刪除嗎?");
-            if (confirmed) {
-              const row = link.closest("tr"); // 找到最近的 <tr> 元素
-              row.remove(); // 從DOM中移除 <tr> 元素
-            }
-          });
-        });
-      });
-    </script>
-
     <!-- 刪除整條tr（使用 Bootstrap modal 詢問確認） -->
     <script>
       // 等待文檔完全載入後執行 JavaScript 代碼
@@ -732,5 +950,8 @@
         });
       });
     </script>
+
+    <!-- search bar获取当前日期 -->
+    <script src="js/getCurrentDate.js"></script>
   </body>
 </html>
